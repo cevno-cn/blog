@@ -428,7 +428,7 @@ More </div>
       var imgObj = new Image();
       imgObj.src = "http://ganto.xyz/photo/img/"+list[list.length-1]+".jpg";
     }
-    $('background').css("background-image","url(http://ganto.xyz/photo/img/"+list[count]+".jpg)");
+    $('.background').css("background-image","url(http://ganto.xyz/photo/img/"+list[count]+".jpg)");
     load();
           
           
@@ -436,7 +436,7 @@ More </div>
       num = parseInt(Math.random()*(img_num+1));
       list.push(num);
       count++;
-      $('background').css("background-image","url(http://ganto.xyz/photo/img/"+list[count]+".jpg)");
+      $('.background').css("background-image","url(http://ganto.xyz/photo/img/"+list[count]+".jpg)");
       load();
     },60000);
   })
