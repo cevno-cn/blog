@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>我的博客史</title>
+    <link href="/2020/02/18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%B2/"/>
+    <url>/2020/02/18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%B2/</url>
+    
+    <content type="html"><![CDATA[<p>你好！欢迎访问我的博客！<br>在之前搭建过很多的博客，最终都因那些博客模板的可扩展性不够好、不够美观等各种原因，没能继续使用。<br>我还自己写过一些静态博客，但是实际运行起来太复杂了，原理就是写一个首页，然后文章单独放在一个位置，写好一个文章就够复杂的了，写文章也只有手工打代码，并且写完之后，发布上去，还需要手动修改首页内容，我感觉这样的博客虽然是自己写的，有最高的权限，但是很low。<br>知道我发现了hexo博客框架，我发现原来博客还能这么玩。<br>hexo的优点不必我多说，大家应该都有所耳闻。<br>以后不出意外的话，也将继续使用hexo写博客，分享我的生活。<br>别的也不说了，我们一起进步吧 //^_^//</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>闲聊</category>
+      
+      <category>hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>解决无法访问GitHub</title>
     <link href="/2020/02/18/%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AEGitHub/"/>
     <url>/2020/02/18/%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AEGitHub/</url>
