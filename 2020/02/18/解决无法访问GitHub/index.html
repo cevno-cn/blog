@@ -16,7 +16,7 @@
   <meta name="description" content="">
   <meta name="author" content="Ganto">
   <meta name="keywords" content="">
-  <title>标签 ~ GANTO</title>
+  <title>解决无法访问GitHub ~ GANTO</title>
 
   <link rel="stylesheet" href="https://ganto_blog.gitee.io/blog/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="https://ganto_blog.gitee.io/blog/lib/bootstrap/css/bootstrap.min.css"  >
@@ -39,7 +39,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -106,8 +106,8 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('/img/default.png')no-repeat center center;
+    <div class="view intro-2" id="background" false
+         style="background: url('https://ganto_blog.gitee.io/blog/img/default.png')no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask rgba-black-light flex-center">
@@ -116,6 +116,41 @@
               
             </span>
 
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期二, 二月 18日 2020, 4:22 下午
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    166 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      1 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
             
           </div>
 
@@ -127,22 +162,76 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center tagcloud">
-  <a href="https://ganto_blog.gitee.io/blog/tags/hexo/" style="font-size: 15px; color: #bbe">hexo</a> <a href="https://ganto_blog.gitee.io/blog/tags/%E6%95%99%E7%A8%8B/" style="font-size: 15px; color: #bbe">教程</a>
-</div>
-              </div>
-            </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h2 id="国内用户无法访问GitHub解决办法"><a href="#国内用户无法访问GitHub解决办法" class="headerlink" title="国内用户无法访问GitHub解决办法"></a>国内用户无法访问GitHub解决办法</h2><p>进入电脑此路径C:\Windows\System32\drivers\etc，用记事本打开hosts文件，在后面添加一下字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">192.30.253.112 github.com</span><br><span class="line"></span><br><span class="line">192.30.253.119 gist.github.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 assets-cdn.github.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 raw.githubusercontent.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 gist.githubusercontent.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 cloud.githubusercontent.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 camo.githubusercontent.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 avatars0.githubusercontent.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 avatars1.githubusercontent.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 avatars2.githubusercontent.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 avatars3.githubusercontent.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 avatars4.githubusercontent.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 avatars5.githubusercontent.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 avatars6.githubusercontent.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 avatars7.githubusercontent.com</span><br><span class="line"></span><br><span class="line">151.101.100.133 avatars8.githubusercontent.com</span><br></pre></td></tr></table></figure>
+
+<p>添加完成后，保存即可，如果被电脑管家检测到风险，选择信任即可！</p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/%E6%95%99%E7%A8%8B">教程</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/%E6%95%99%E7%A8%8B">教程</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h5"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -221,6 +310,26 @@
 
 
 
+  <script src="https://ganto_blog.gitee.io/blog/js/post.js" ></script>
+  
+    <script src="https://ganto_blog.gitee.io/blog/lib/tocbot/tocbot.min.js" ></script>
+    <script>
+      $(document).ready(function () {
+        tocbot.init({
+          tocSelector: '#tocbot',
+          contentSelector: '.post-content',
+          headingSelector: 'h1,h2,h3,h4,h5,h6',
+          linkClass: 'tocbot-link',
+          activeLinkClass: 'tocbot-active-link',
+          listClass: 'tocbot-list',
+          isCollapsedClass: 'tocbot-is-collapsed',
+          collapsibleClass: 'tocbot-is-collapsible',
+          scrollSmooth: true,
+        });
+      });
+    </script>
+  
+
 
 
   <script src="https://ganto_blog.gitee.io/blog/lib/smoothscroll/SmoothScroll.min.js" ></script>
@@ -249,7 +358,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "标签&nbsp;",
+        "解决无法访问GitHub&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
