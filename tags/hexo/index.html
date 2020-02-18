@@ -238,36 +238,6 @@
 </footer>
 
 <!-- SCRIPTS -->
-<script src="//cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-<script>
-  $(function(){
-    var img_num = 202;
-    //预加载图片（多往后加载出来一张图片）
-    var list = [];
-    var a = parseInt(Math.random()*(img_num+1)),
-      b = parseInt(Math.random()*(img_num+1));
-    list.push(a, b);
-    var count = 0;
-    var num = parseInt(Math.random()*(img_num+1));
-
-    function load() {
-      var imgObj = new Image();
-      imgObj.src = "http://ganto.xyz/photo/img/"+list[list.length-1]+".jpg";
-    }
-    $('.background').css("background-image","url(http://ganto.xyz/photo/img/"+list[count]+".jpg)");
-    load();
-          
-          
-    setInterval(function(){
-      num = parseInt(Math.random()*(img_num+1));
-      list.push(num);
-      count++;
-      $('.background').css("background-image","url(http://ganto.xyz/photo/img/"+list[count]+".jpg)");
-      load();
-    },60000);
-  })
-</script>
-
 <script src="/lib/jquery/jquery.min.js" ></script>
 <script src="/lib/popper/popper.min.js" ></script>
 <script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
