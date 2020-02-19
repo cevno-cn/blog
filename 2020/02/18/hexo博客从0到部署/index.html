@@ -16,7 +16,7 @@
   <meta name="description" content="">
   <meta name="author" content="Ganto">
   <meta name="keywords" content="">
-  <title>hexo博客从0到部署到码云 _ GANTO</title>
+  <title>hexo博客从0到部署 _ GANTO</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -130,7 +130,7 @@
                   
                   &nbsp;<i class="far fa-chart-bar"></i>
                   <span class="post-count">
-                    863 字
+                    932 字
                   </span>&nbsp;
                 
 
@@ -172,7 +172,7 @@
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
             <h2 id="第一步：我们首先要安装node-js和git"><a href="#第一步：我们首先要安装node-js和git" class="headerlink" title="第一步：我们首先要安装node.js和git"></a>第一步：我们首先要安装node.js和git</h2><p>因为hexo是基于<code>node.js</code>的，所以依赖<code>node.js</code>把md文件生成静态文件html。</p>
-<p>我们是利用<code>git</code>进行对hexo项目操作的，包括把文章部署到码云。</p>
+<p>我们是利用<code>git</code>进行对hexo项目操作的，包括把文章部署到码云/github。</p>
 <p>所以首先要安装<code>node.js</code>、<code>git</code></p>
 <h2 id="第二步：安装并生成hexo默认文件"><a href="#第二步：安装并生成hexo默认文件" class="headerlink" title="第二步：安装并生成hexo默认文件"></a>第二步：安装并生成hexo默认文件</h2><h4 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1. 安装hexo"></a>1. 安装hexo</h4><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p>
 <p>首先创建一个文件夹为blog，我们右键使用Git Bash Here打开。</p>
@@ -193,17 +193,21 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
 <p>然后我们就可以使用 localhost:4000 访问了！</p>
-<h2 id="部署到码云"><a href="#部署到码云" class="headerlink" title="部署到码云"></a>部署到码云</h2><h4 id="码云准备工作"><a href="#码云准备工作" class="headerlink" title="码云准备工作"></a>码云准备工作</h4><p>首先我们需要有一个码云账户</p>
+<h2 id="部署到码云-github"><a href="#部署到码云-github" class="headerlink" title="部署到码云/github"></a>部署到码云/github</h2><h4 id="码云准备工作"><a href="#码云准备工作" class="headerlink" title="码云准备工作"></a>码云准备工作</h4><p>首先我们需要有一个码云账户</p>
 <p>然后创建一个仓库</p>
 <p>创建仓库的时候一定要选择 <strong><em>使用Readme文件初始化这个仓库</em></strong></p>
 <p>然后进入仓库点击<strong>克隆/下载</strong>，复制<strong>https</strong>地址，如：<a href="https://gitee.com/XXX/XXX.git" target="_blank" rel="noopener">https://gitee.com/XXX/XXX.git</a></p>
+<p>github也和码云类似</p>
 <h4 id="配置-config-yml文件"><a href="#配置-config-yml文件" class="headerlink" title="配置_config.yml文件"></a>配置_config.yml文件</h4><p>打开配置文件，拉到最后，找到<strong>deploy</strong>，这样配置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;gitee.com&#x2F;XXX&#x2F;XXX.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>如果要同时部署到码云/github，可以这样配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: </span><br><span class="line">    coding: https:&#x2F;&#x2F;gitee.com&#x2F;xxx&#x2F;xxx.git,master</span><br><span class="line">    duapp: https:&#x2F;&#x2F;github.com&#x2F;xxx&#x2F;xxx.github.io.git,master</span><br></pre></td></tr></table></figure>
 
 <p>一点要注意规范，<code>type:</code> <code>repo:</code> <code>branch:</code>后一定要空一格</p>
 <p>然后我们要注意配置文件中的<strong>root:</strong></p>
 <p>默认是<strong>root: /</strong>，我们要修改成<strong>root: <a href="https://ganto_blog.gitee.io/blog/" target="_blank" rel="noopener">https://ganto_blog.gitee.io/blog/</a></strong>或者<strong>root: /blog/</strong></p>
-<h4 id="提交代码到码云仓库"><a href="#提交代码到码云仓库" class="headerlink" title="提交代码到码云仓库"></a>提交代码到码云仓库</h4><p>首先安装 hexo-deployer-git，这是一个插件包，用于提交代码到<strong>码云</strong> / <strong>github</strong></p>
+<h4 id="提交代码到码云-github仓库"><a href="#提交代码到码云-github仓库" class="headerlink" title="提交代码到码云/github仓库"></a>提交代码到码云/github仓库</h4><p>首先安装 hexo-deployer-git，这是一个插件包，用于提交代码到<strong>码云</strong> / <strong>github</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 <p>执行成功后，会在文件夹中多出一个<strong>.deploy_git</strong>文件夹</p>
@@ -400,7 +404,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "hexo博客从0到部署到码云&nbsp;",
+        "hexo博客从0到部署&nbsp;",
       ],
       cursorChar: "",
       typeSpeed: 70,
