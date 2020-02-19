@@ -57,8 +57,8 @@
   
   <entry>
     <title>hexo博客从0到部署到码云</title>
-    <link href="/2020/02/18/hexo%E5%8D%9A%E5%AE%A2%E4%BB%8E0%E5%88%B0%E9%83%A8%E7%BD%B2%E5%88%B0%E7%A0%81%E4%BA%91/"/>
-    <url>/2020/02/18/hexo%E5%8D%9A%E5%AE%A2%E4%BB%8E0%E5%88%B0%E9%83%A8%E7%BD%B2%E5%88%B0%E7%A0%81%E4%BA%91/</url>
+    <link href="/2020/02/18/hexo%E5%8D%9A%E5%AE%A2%E4%BB%8E0%E5%88%B0%E9%83%A8%E7%BD%B2/"/>
+    <url>/2020/02/18/hexo%E5%8D%9A%E5%AE%A2%E4%BB%8E0%E5%88%B0%E9%83%A8%E7%BD%B2/</url>
     
     <content type="html"><![CDATA[<h2 id="第一步：我们首先要安装node-js和git"><a href="#第一步：我们首先要安装node-js和git" class="headerlink" title="第一步：我们首先要安装node.js和git"></a>第一步：我们首先要安装node.js和git</h2><p>因为hexo是基于<code>node.js</code>的，所以依赖<code>node.js</code>把md文件生成静态文件html。</p><p>我们是利用<code>git</code>进行对hexo项目操作的，包括把文章部署到码云。</p><p>所以首先要安装<code>node.js</code>、<code>git</code></p><h2 id="第二步：安装并生成hexo默认文件"><a href="#第二步：安装并生成hexo默认文件" class="headerlink" title="第二步：安装并生成hexo默认文件"></a>第二步：安装并生成hexo默认文件</h2><h4 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1. 安装hexo"></a>1. 安装hexo</h4><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p><p>首先创建一个文件夹为blog，我们右键使用Git Bash Here打开。</p><p>直接运行下方代码，使用 npm进行安装hexo</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure><p>安装结束后，我们通过以下命令查看版本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo version</span><br></pre></td></tr></table></figure><p>如果出现一下文字，则证明安装hexo成功，这里打印出了各种依赖环境的版本号</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">hexo-cli: 3.1.0</span><br><span class="line">os: Windows_NT 10.0.18363 win32 x64</span><br><span class="line">node: 12.14.1</span><br><span class="line">v8: 7.7.299.13-node.16</span><br><span class="line">uv: 1.33.1</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">brotli: 1.0.7</span><br><span class="line">ares: 1.15.0</span><br><span class="line">modules: 72</span><br><span class="line">nghttp2: 1.40.0</span><br><span class="line">napi: 5</span><br><span class="line">llhttp: 2.0.1</span><br><span class="line">http_parser: 2.8.0</span><br><span class="line">openssl: 1.1.1d</span><br><span class="line">cldr: 35.1</span><br><span class="line">icu: 64.2</span><br><span class="line">tz: 2019c</span><br><span class="line">unicode: 12.1</span><br></pre></td></tr></table></figure><h4 id="2-新建所需的文件"><a href="#2-新建所需的文件" class="headerlink" title="2. 新建所需的文件"></a>2. 新建所需的文件</h4><p>安装 Hexo 完成后，执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm init myblog &#x2F;&#x2F; 新建所需要的文件</span><br><span class="line">$ cd myblog &#x2F;&#x2F; 进入myblog</span><br><span class="line">$ npm install &#x2F;&#x2F; 同步配置文件</span><br></pre></td></tr></table></figure><p><strong>注意</strong>：在使用<code>$ npm init</code>命令的时候有概率会出现配置环境的问题</p><p>启动hexo</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>然后我们就可以使用 localhost:4000 访问了！</p><h2 id="部署到码云"><a href="#部署到码云" class="headerlink" title="部署到码云"></a>部署到码云</h2><h4 id="码云准备工作"><a href="#码云准备工作" class="headerlink" title="码云准备工作"></a>码云准备工作</h4><p>首先我们需要有一个码云账户</p><p>然后创建一个仓库</p><p>创建仓库的时候一定要选择 <strong><em>使用Readme文件初始化这个仓库</em></strong></p><p>然后进入仓库点击<strong>克隆/下载</strong>，复制<strong>https</strong>地址，如：<a href="https://gitee.com/XXX/XXX.git" target="_blank" rel="noopener">https://gitee.com/XXX/XXX.git</a></p><h4 id="配置-config-yml文件"><a href="#配置-config-yml文件" class="headerlink" title="配置_config.yml文件"></a>配置_config.yml文件</h4><p>打开配置文件，拉到最后，找到<strong>deploy</strong>，这样配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;gitee.com&#x2F;XXX&#x2F;XXX.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>一点要注意规范，<code>type:</code> <code>repo:</code> <code>branch:</code>后一定要空一格</p><p>然后我们要注意配置文件中的<strong>root:</strong></p><p>默认是<strong>root: /</strong>，我们要修改成<strong>root: <a href="https://ganto_blog.gitee.io/blog/" target="_blank" rel="noopener">https://ganto_blog.gitee.io/blog/</a></strong>或者<strong>root: /blog/</strong></p><h4 id="提交代码到码云仓库"><a href="#提交代码到码云仓库" class="headerlink" title="提交代码到码云仓库"></a>提交代码到码云仓库</h4><p>首先安装 hexo-deployer-git，这是一个插件包，用于提交代码到<strong>码云</strong> / <strong>github</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>执行成功后，会在文件夹中多出一个<strong>.deploy_git</strong>文件夹</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure><p>这时会弹出账号密码框，这里的账号密码是码云的账号密码，注意别把名字当成账号，账号一般都是手机号或者邮箱地址</p><p>成功提交代码后，我们会在码云仓库看到我们提交的代码</p><h2 id="搭建后出现的一系列问题"><a href="#搭建后出现的一系列问题" class="headerlink" title="搭建后出现的一系列问题"></a>搭建后出现的一系列问题</h2><ol><li><p>码云Gitee Pages 普通版，每次提交代码后，都需要手动更新 Pages 服务（重启 Pages 服务），可以免费使用一个月pro版，坑</p></li><li><p>在博客中有时候加载jQuery包的路径无法访问，我们需要修改jQuery包路径，这个问题好像只有默认landscape主题有,如果真的存在这种问题的话，可以进入themes\landscape\layout_partial，找到after-footer.ejs打开，把引用的包改成其他可以访问的即可，不可以改成http地址包</p></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;jquery&#x2F;3.4.1&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -113,37 +113,6 @@
   
   
   <entry>
-    <title>axios使用方法</title>
-    <link href="/2020/02/11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
-    <url>/2020/02/11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
-    
-    <content type="html"><![CDATA[<h4 id="快速了解AXIOS"><a href="#快速了解AXIOS" class="headerlink" title="快速了解AXIOS"></a>快速了解AXIOS</h4><h5 id="什么是axios"><a href="#什么是axios" class="headerlink" title="什么是axios"></a>什么是axios</h5><p>Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。</p><h5 id="axios的特性"><a href="#axios的特性" class="headerlink" title="axios的特性"></a>axios的特性</h5><ul><li>从浏览器中创建 XMLHttpRequests</li><li>从 node.js 创建 http 请求</li><li>支持 Promise API</li><li>拦截请求和响应</li><li>转换请求数据和响应数据</li><li>取消请求</li><li>自动转换 JSON 数据</li><li>客户端支持防御 XSRF</li></ul><h4 id="部署到项目中"><a href="#部署到项目中" class="headerlink" title="部署到项目中"></a>部署到项目中</h4><p>直接导入在线js库，就可以在项目中使用axios了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;axios&#x2F;dist&#x2F;axios.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">"https://autumnfish.cn/api/joke/list?num=1"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">success</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(success);</span><br><span class="line">&#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>此链接：<a href="https://autumnfish.cn/api/joke/list?num=1为获取随机笑话的api接口" target="_blank" rel="noopener">https://autumnfish.cn/api/joke/list?num=1为获取随机笑话的api接口</a></p><h4 id="AXIOS与VUE结合使用"><a href="#AXIOS与VUE结合使用" class="headerlink" title="AXIOS与VUE结合使用"></a>AXIOS与VUE结合使用</h4><p>将axios请求数据代码添加入methods中，其他的语法和非vue项目中请求一样</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">methods:&#123;</span><br><span class="line">  axios.get(<span class="string">"请求数据地址"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">success</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(success);</span><br><span class="line">  &#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>vue</category>
-      
-      <category>axios</category>
-      
-      <category>教程</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>vue</tag>
-      
-      <tag>axios</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>vue练习实例</title>
     <link href="/2020/02/11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/"/>
     <url>/2020/02/11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/</url>
@@ -190,6 +159,37 @@
     <tags>
       
       <tag>api</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>axios使用方法</title>
+    <link href="/2020/02/11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <url>/2020/02/11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<h4 id="快速了解AXIOS"><a href="#快速了解AXIOS" class="headerlink" title="快速了解AXIOS"></a>快速了解AXIOS</h4><h5 id="什么是axios"><a href="#什么是axios" class="headerlink" title="什么是axios"></a>什么是axios</h5><p>Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。</p><h5 id="axios的特性"><a href="#axios的特性" class="headerlink" title="axios的特性"></a>axios的特性</h5><ul><li>从浏览器中创建 XMLHttpRequests</li><li>从 node.js 创建 http 请求</li><li>支持 Promise API</li><li>拦截请求和响应</li><li>转换请求数据和响应数据</li><li>取消请求</li><li>自动转换 JSON 数据</li><li>客户端支持防御 XSRF</li></ul><h4 id="部署到项目中"><a href="#部署到项目中" class="headerlink" title="部署到项目中"></a>部署到项目中</h4><p>直接导入在线js库，就可以在项目中使用axios了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;axios&#x2F;dist&#x2F;axios.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">"https://autumnfish.cn/api/joke/list?num=1"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">success</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(success);</span><br><span class="line">&#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>此链接：<a href="https://autumnfish.cn/api/joke/list?num=1为获取随机笑话的api接口" target="_blank" rel="noopener">https://autumnfish.cn/api/joke/list?num=1为获取随机笑话的api接口</a></p><h4 id="AXIOS与VUE结合使用"><a href="#AXIOS与VUE结合使用" class="headerlink" title="AXIOS与VUE结合使用"></a>AXIOS与VUE结合使用</h4><p>将axios请求数据代码添加入methods中，其他的语法和非vue项目中请求一样</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">methods:&#123;</span><br><span class="line">  axios.get(<span class="string">"请求数据地址"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">success</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(success);</span><br><span class="line">  &#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue</category>
+      
+      <category>axios</category>
+      
+      <category>教程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue</tag>
+      
+      <tag>axios</tag>
       
     </tags>
     
