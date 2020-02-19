@@ -422,6 +422,13 @@ More </div>
 </footer>
 
 <!-- SCRIPTS -->
+<script>
+  window.onload = function(){
+    var img_num = 202;
+    var num = parseInt(Math.random()*(img_num+1));
+    document.getElementById("background").style.backgroundImage = "url(http://q5xub6nnz.bkt.clouddn.com/" + num + ".jpg)";
+  }
+</script>
 <script src="/lib/jquery/jquery.min.js" ></script>
 <script src="/lib/popper/popper.min.js" ></script>
 <script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
