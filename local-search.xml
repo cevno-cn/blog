@@ -112,5 +112,144 @@
   
   
   
+  <entry>
+    <title>axios使用方法</title>
+    <link href="/2020/02/11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <url>/2020/02/11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<h4 id="快速了解AXIOS"><a href="#快速了解AXIOS" class="headerlink" title="快速了解AXIOS"></a>快速了解AXIOS</h4><h5 id="什么是axios"><a href="#什么是axios" class="headerlink" title="什么是axios"></a>什么是axios</h5><p>Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。</p><h5 id="axios的特性"><a href="#axios的特性" class="headerlink" title="axios的特性"></a>axios的特性</h5><ul><li>从浏览器中创建 XMLHttpRequests</li><li>从 node.js 创建 http 请求</li><li>支持 Promise API</li><li>拦截请求和响应</li><li>转换请求数据和响应数据</li><li>取消请求</li><li>自动转换 JSON 数据</li><li>客户端支持防御 XSRF</li></ul><h4 id="部署到项目中"><a href="#部署到项目中" class="headerlink" title="部署到项目中"></a>部署到项目中</h4><p>直接导入在线js库，就可以在项目中使用axios了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;axios&#x2F;dist&#x2F;axios.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">"https://autumnfish.cn/api/joke/list?num=1"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">success</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(success);</span><br><span class="line">&#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>此链接：<a href="https://autumnfish.cn/api/joke/list?num=1为获取随机笑话的api接口" target="_blank" rel="noopener">https://autumnfish.cn/api/joke/list?num=1为获取随机笑话的api接口</a></p><h4 id="AXIOS与VUE结合使用"><a href="#AXIOS与VUE结合使用" class="headerlink" title="AXIOS与VUE结合使用"></a>AXIOS与VUE结合使用</h4><p>将axios请求数据代码添加入methods中，其他的语法和非vue项目中请求一样</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">methods:&#123;</span><br><span class="line">  axios.get(<span class="string">"请求数据地址"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">success</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(success);</span><br><span class="line">  &#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue</category>
+      
+      <category>axios</category>
+      
+      <category>教程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue</tag>
+      
+      <tag>axios</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vue练习实例</title>
+    <link href="/2020/02/11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/"/>
+    <url>/2020/02/11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/</url>
+    
+    <content type="html"><![CDATA[<p>最近在b站学习vue框架，跟着老师用vue写了一个音乐播放器</p><p>实例<a href="http://ganto.xyz/vue">链接</a></p><p>播放器使用了 网易云音乐api 接口</p><p>用vue实现的</p><p>如想了解 <a href="https://autumnfish.cn/" target="_blank" rel="noopener">网易云音乐 API</a> 可以访问官方文档了解</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue</category>
+      
+      <category>实例</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>网易云音乐 API</title>
+    <link href="/2020/02/11/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-API/"/>
+    <url>/2020/02/11/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-API/</url>
+    
+    <content type="html"><![CDATA[<p>网易云音乐在国产音乐服务方面确实做的数一数二</p><p><a href="https://autumnfish.cn/" target="_blank" rel="noopener">网易云音乐 API</a>接口，里面的接口类型很丰富，关键是免费，大家可以耍一耍</p><p><img src="http://ganto.top/blog/article/share/images/wy.jpg" srcset="/img/loading.gif" alt=""></p><h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><ul><li><a href="https://autumnfish.cn/" target="_blank" rel="noopener">网易云音乐 API</a></li><li><a href="https://music.163.com/" target="_blank" rel="noopener">网易云音乐</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>网易云音乐api</category>
+      
+      <category>分享</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>api</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vue中的常用指令</title>
+    <link href="/2020/02/10/vue%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+    <url>/2020/02/10/vue%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<h1 id="VUE中的常用指令"><a href="#VUE中的常用指令" class="headerlink" title="VUE中的常用指令"></a>VUE中的常用指令</h1><h4 id="整理基本的常用指令"><a href="#整理基本的常用指令" class="headerlink" title="整理基本的常用指令"></a>整理基本的常用指令</h4><p><code>v-text</code> <code>v-html</code> <code>v-on</code> <code>v-show</code> <code>v-if</code> <code>v-bind</code> <code>v-for</code> <code>v-model</code></p><h4 id="vue中的常用指令在代码中使用"><a href="#vue中的常用指令在代码中使用" class="headerlink" title="vue中的常用指令在代码中使用"></a>vue中的常用指令在代码中使用</h4><p>js代码</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">el:<span class="string">"#app"</span>,</span><br><span class="line">data:&#123;</span><br><span class="line">message:<span class="string">"&lt;b&gt;加粗字体&lt;b&gt;"</span>,</span><br><span class="line">arr:[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&#125;,</span><br><span class="line">methods:&#123;</span><br><span class="line">fun:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">alert(<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><h5 id="v-text"><a href="#v-text" class="headerlink" title="v-text"></a>v-text</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-text</span>=<span class="string">"message"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><h5 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a>v-html</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-html</span>=<span class="string">"message"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p><code>v-text</code> <code>v-html</code> 的区别在于<code>v-html</code> 指令可以解析出标签，而<code>v-text</code> 不能解析标签，会原封不动的将&lt;b&gt;加粗字体&lt;/b&gt;打印出来。</p><h5 id="v-on-绑定的是一些事件，如-click、dblclick"><a href="#v-on-绑定的是一些事件，如-click、dblclick" class="headerlink" title="v-on / @ 绑定的是一些事件，如: click、dblclick"></a>v-on / @ 绑定的是一些事件，如: click、dblclick</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-on:click</span>=<span class="string">"fun"</span>&gt;</span>点击<span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> @<span class="attr">:click</span>=<span class="string">"fun"</span>&gt;</span>点击<span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><h5 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-show</span>=<span class="string">"true"</span>&gt;</span>内容<span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><h5 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-if</span>=<span class="string">"true"</span>&gt;</span>内容<span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p><code>v-show</code> <code>v-if</code> 的区别在于 <code>v-show</code> 指令只是利用display样式对元素显示隐藏，而 <code>v-if</code> 是在DOM树内添加或者删除元素</p><h5 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:src</span>=<span class="string">"/路径"</span>&gt;</span>a标签<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">a</span> <span class="attr">:src</span>=<span class="string">"/路径"</span>&gt;</span>a标签<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><h5 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-for</span>=<span class="string">"a in arr"</span>&gt;</span>&#123;&#123;a&#125;&#125;<span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><h5 id="v-model双向数据绑定"><a href="#v-model双向数据绑定" class="headerlink" title="v-model双向数据绑定"></a>v-model双向数据绑定</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"message"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue</category>
+      
+      <category>学习</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>我的第一个vue程序</title>
+    <link href="/2020/02/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAvue%E7%A8%8B%E5%BA%8F/"/>
+    <url>/2020/02/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAvue%E7%A8%8B%E5%BA%8F/</url>
+    
+    <content type="html"><![CDATA[<h1 id="我的第一个VUE程序"><a href="#我的第一个VUE程序" class="headerlink" title="我的第一个VUE程序"></a>我的第一个VUE程序</h1><p>此文章只是记录自己的vue学习情况文档！方便日后自己查询。</p><h2 id="VUE-JS相关资料"><a href="#VUE-JS相关资料" class="headerlink" title="VUE.JS相关资料"></a>VUE.JS相关资料</h2><h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul><li><p>Vue官方网站中文文档：<a href="https://cn.vuejs.org/" target="_blank" rel="noopener">vue.js</a></p></li><li><p>部署vue项目：只需在html文件下引用下方代码，就可以直接将vue部署到项目中</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></li></ul><h2 id="我的第一个VUE程序：HELLO-VUE"><a href="#我的第一个VUE程序：HELLO-VUE" class="headerlink" title="我的第一个VUE程序：HELLO VUE!"></a>我的第一个VUE程序：HELLO VUE!</h2><p>html代码</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">&#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p>js代码</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">el:<span class="string">"#app"</span>,</span><br><span class="line">data:&#123;</span><br><span class="line">message:<span class="string">"Hello Vue!"</span></span><br><span class="line">&#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><p>​    <font color="red"><strong>注意：</strong></font>编写的vue项目中的js代码，至少要放到body下的最后一个结束标签后面</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">&#123;&#123;message&#125;&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    var app &#x3D; new Vue(&#123;</span><br><span class="line">    el:&quot;#app&quot;,</span><br><span class="line">    data:&#123;</span><br><span class="line">    message:&quot;Hello Vue!&quot;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>渐进式 JavaScript 框架</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue</category>
+      
+      <category>学习</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>
