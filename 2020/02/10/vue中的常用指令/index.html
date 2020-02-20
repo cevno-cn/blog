@@ -27,7 +27,7 @@
 
 
 
-  <link rel="stylesheet" href="/lib/prettify/github-v2.min.css"  >
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night.min.css"  >
 
 <link rel="stylesheet" href="/css/main.css"  >
 
@@ -260,6 +260,37 @@
 <!-- Comments -->
 <div class="col-lg-7 mx-auto nopadding-md">
   <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+  <div id="vcomments" style="width: 90%; margin: 0 auto;"></div>
+  <script defer src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script>
+    var notify = 'false' === true;
+    var verify = 'true' === true;
+    var oldLoad = window.onload;
+    window.onload = function () {
+      new Valine({
+        el: '#vcomments',
+        notify: notify,
+        verify: verify,
+        app_id: "aepSK01JH6MBBnycMOyG8esk-MdYXbMMI",
+        app_key: "r6fIpym2WjgJ67oqJY4Xb4t0",
+        placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!",
+        avatar: "retro",
+        meta: ['nick', 'mail', 'link'],
+        pageSize: "10",
+      });
+      oldLoad && oldLoad();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
     
   </div>
 </div>
