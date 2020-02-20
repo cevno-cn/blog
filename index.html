@@ -27,7 +27,7 @@
 
 
 
-  <link rel="stylesheet" href="/lib/prettify/tomorrow-night.min.css"  >
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
 
 <link rel="stylesheet" href="/css/main.css"  >
 
@@ -193,7 +193,9 @@
 知道我发现了hexo博客框架，我发现原来博客还能这么玩。
 hexo的优点不必我多说，大家应该都有所耳闻。
 刚一开始我是把博客存放到码云上的，但是最终我用了GitHub…原因就不说了，大家都懂-_-
-以后不出意外的话，也</div>
+以后不出意外的话，也将继续使用hexo写博客，分享我的生活。
+别的也不说了，我们一起进步吧 //^_^//
+我的旧博客1. Old Blog2. 码云Blog</div>
         </div>
       </a>
 
@@ -285,7 +287,10 @@ hexo的优点不必我多说，大家应该都有所耳闻。
 1$ npm install hexo-cli -g
 
 安装结束后，我们通过以下命令查看版本
-1$ </div>
+1$ hexo version
+
+如果出现一下文字，则证明安装hexo成功，这里打印出了各种依赖环境的版本号
+123456789101112131415161718hexo-cli: 3.1.0os: Windows_NT 10.0.18363 win32 x64node: 12.14.1v8: 7.7.299.13-node.16uv: 1.33.1zlib: 1.2.11brotli: 1.0.7a</div>
         </div>
       </a>
 
@@ -326,7 +331,12 @@ splice向数组中添加/删除元素：
 数组fruits输出结果
 1Banana,Orange,Lemon,Kiwi,Apple,Mango
 
-splice(2,0,”Lemon”,”Kiwi”)的意思是，在数组</div>
+splice(2,0,”Lemon”,”Kiwi”)的意思是，在数组下标为2的位置插入Lemon、Kiwi，其中0的意思是不删除原本下标为2的元素Apple，而是将插入的元素从下标2开始插入原本位置的元素往后走
+删除
+12var arr &#x3D; [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];fruits.splice(2,2);
+
+数组arr输出结果
+1</div>
         </div>
       </a>
 
@@ -433,13 +443,6 @@ splice(2,0,”Lemon”,”Kiwi”)的意思是，在数组</div>
 </footer>
 
 <!-- SCRIPTS -->
-<script>
-  window.onload = function(){
-    var img_num = 202;
-    var num = parseInt(Math.random()*(img_num+1));
-    document.getElementById("background").style.backgroundImage = "url(http://q5xub6nnz.bkt.clouddn.com/" + num + ".jpg)";
-  }
-</script>
 <script src="/lib/jquery/jquery.min.js" ></script>
 <script src="/lib/popper/popper.min.js" ></script>
 <script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
@@ -463,6 +466,18 @@ splice(2,0,”Lemon”,”Kiwi”)的意思是，在数组</div>
 <!-- Plugins -->
 
 
+  
+
+  
+
+  
+
+  
+
+  <!-- cnzz Analytics -->
+  
+
+
 
   <script src="/lib/prettify/prettify.min.js" ></script>
   <script>
@@ -481,7 +496,7 @@ splice(2,0,”Lemon”,”Kiwi”)的意思是，在数组</div>
         '  ',
         "Hello! My name is Ganto. Welcome to my website.&nbsp;",
       ],
-      cursorChar: "",
+      cursorChar: "_",
       typeSpeed: 70,
       loop: false,
     });
@@ -498,7 +513,7 @@ splice(2,0,”Lemon”,”Kiwi”)的意思是，在数组</div>
   <script>
     anchors.options = {
       placement: "right",
-      visible: "hover",
+      visible: "false",
       
       icon: "#"
       

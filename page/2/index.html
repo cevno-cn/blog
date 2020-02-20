@@ -27,7 +27,7 @@
 
 
 
-  <link rel="stylesheet" href="/lib/prettify/tomorrow-night.min.css"  >
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
 
 <link rel="stylesheet" href="/css/main.css"  >
 
@@ -166,7 +166,11 @@ axios的特性
 客户端支持防御 XSRF
 
 部署到项目中直接导入在线js库，就可以在项目中使用axios了
-1&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;axios&#x2F;dist&#x2F;</div>
+1&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;axios&#x2F;dist&#x2F;axios.min.js&quot;&gt;&lt;&#x2F;script&gt;
+
+
+
+语法12345axios.get("https://autumnfish.cn/api/joke/list?num=1").then(function(success)&#123;  console.log(success);&#125;).catch(function(error)&#123;  cons</div>
         </div>
       </a>
 
@@ -190,6 +194,51 @@ axios的特性
             <a href="/tags/vue">vue</a>&nbsp;
           
             <a href="/tags/axios">axios</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a href="/2020/02/11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/">
+        <p class="h4 index-header">vue练习实例</p>
+      </a>
+
+      <a href="/2020/02/11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/">
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">最近在b站学习vue框架，跟着老师用vue写了一个音乐播放器
+实例链接
+播放器使用了 网易云音乐api 接口
+用vue实现的
+如想了解 网易云音乐 API 可以访问官方文档了解
+</div>
+        </div>
+      </a>
+
+      <div class="index-btm">
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-11&nbsp;&nbsp;
+        
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/vue">vue</a>&nbsp;
+          
+            <a href="/categories/%E5%AE%9E%E4%BE%8B">实例</a>&nbsp;
+          &nbsp;
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/vue">vue</a>&nbsp;
           
         
       </div>
@@ -247,64 +296,35 @@ axios的特性
     
     
     <div class="col-12 col-md-8 mx-auto index-info">
-      <a href="/2020/02/11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/">
-        <p class="h4 index-header">vue练习实例</p>
+      <a href="/2020/02/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAvue%E7%A8%8B%E5%BA%8F/">
+        <p class="h4 index-header">我的第一个vue程序</p>
       </a>
 
-      <a href="/2020/02/11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/">
+      <a href="/2020/02/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAvue%E7%A8%8B%E5%BA%8F/">
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">最近在b站学习vue框架，跟着老师用vue写了一个音乐播放器
-实例链接
-播放器使用了 网易云音乐api 接口
-用vue实现的
-如想了解 网易云音乐 API 可以访问官方文档了解
-</div>
-        </div>
-      </a>
+          <div class="index-text mb-1">我的第一个VUE程序此文章只是记录自己的vue学习情况文档！方便日后自己查询。
+VUE.JS相关资料准备工作
+Vue官方网站中文文档：vue.js
 
-      <div class="index-btm">
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-11&nbsp;&nbsp;
-        
-        
-          <i class="iconfont icon-inbox"></i>
-          
-            <a href="/categories/vue">vue</a>&nbsp;
-          
-            <a href="/categories/%E5%AE%9E%E4%BE%8B">实例</a>&nbsp;
-          &nbsp;
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/vue">vue</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
+部署vue项目：只需在html文件下引用下方代码，就可以直接将vue部署到项目中
+1&lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;
 
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-8 mx-auto index-info">
-      <a href="/2020/02/10/vue%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">
-        <p class="h4 index-header">vue中的常用指令</p>
-      </a>
 
-      <a href="/2020/02/10/vue%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">VUE中的常用指令整理基本的常用指令v-text v-html v-on v-show v-if v-bind v-for v-model
-vue中的常用指令在代码中使用js代码
-1234567891011121314&lt;script&gt;	var app = new Vue(&#123;		el:"#app",		data:&#123;			message:"&lt;b&gt;加粗字体&lt;b&gt;",			arr:[0,1,2,3]		&#125;,		methods:&#123;			fun:function()&#123;				alert(1);            &#</div>
+
+
+
+我的第一个VUE程序：HELLO VUE!html代码
+123&lt;div id="app"&gt;	&#123;&#123;message&#125;&#125;&lt;/div&gt;
+
+js代码
+12345678&lt;script&gt;	var app = new Vue(&#123;		el:"#app",		data:&#123;			message:"Hello Vue!"		&#125;    &#125;)&lt;/script&gt;
+
+​    注意：编写的vue项目中的js代码，至少要放到body下的最后一个结束标签后面
+1234567891011121314</div>
         </div>
       </a>
 
@@ -334,31 +354,27 @@ vue中的常用指令在代码中使用js代码
     
     
     <div class="col-12 col-md-8 mx-auto index-info">
-      <a href="/2020/02/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAvue%E7%A8%8B%E5%BA%8F/">
-        <p class="h4 index-header">我的第一个vue程序</p>
+      <a href="/2020/02/10/vue%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">
+        <p class="h4 index-header">vue中的常用指令</p>
       </a>
 
-      <a href="/2020/02/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAvue%E7%A8%8B%E5%BA%8F/">
+      <a href="/2020/02/10/vue%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">我的第一个VUE程序此文章只是记录自己的vue学习情况文档！方便日后自己查询。
-VUE.JS相关资料准备工作
-Vue官方网站中文文档：vue.js
-
-部署vue项目：只需在html文件下引用下方代码，就可以直接将vue部署到项目中
-1&lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;
+          <div class="index-text mb-1">VUE中的常用指令整理基本的常用指令v-text v-html v-on v-show v-if v-bind v-for v-model
+vue中的常用指令在代码中使用js代码
+1234567891011121314&lt;script&gt;	var app = new Vue(&#123;		el:"#app",		data:&#123;			message:"&lt;b&gt;加粗字体&lt;b&gt;",			arr:[0,1,2,3]		&#125;,		methods:&#123;			fun:function()&#123;				alert(1);            &#125;		&#125;	&#125;)&lt;/script&gt;
 
 
 
+v-text123&lt;div id="app"&gt; &lt;span v-text="message"&gt;&lt;span&gt;&lt;/div&gt;
 
 
-我的第一个VUE程序：HELLO VUE!html代码
-123&lt;div id="app"&gt;	&#123;&#123;message&#125;&#125;&lt;/div&gt;
 
-</div>
+v-html123&lt;div id="app"&gt; &lt;span v-html="message"&gt;&lt;span&gt;&lt</div>
         </div>
       </a>
 
@@ -472,13 +488,6 @@ Vue官方网站中文文档：vue.js
 </footer>
 
 <!-- SCRIPTS -->
-<script>
-  window.onload = function(){
-    var img_num = 202;
-    var num = parseInt(Math.random()*(img_num+1));
-    document.getElementById("background").style.backgroundImage = "url(http://q5xub6nnz.bkt.clouddn.com/" + num + ".jpg)";
-  }
-</script>
 <script src="/lib/jquery/jquery.min.js" ></script>
 <script src="/lib/popper/popper.min.js" ></script>
 <script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
@@ -502,6 +511,18 @@ Vue官方网站中文文档：vue.js
 <!-- Plugins -->
 
 
+  
+
+  
+
+  
+
+  
+
+  <!-- cnzz Analytics -->
+  
+
+
 
   <script src="/lib/prettify/prettify.min.js" ></script>
   <script>
@@ -520,7 +541,7 @@ Vue官方网站中文文档：vue.js
         '  ',
         "Hello! My name is Ganto. Welcome to my website.&nbsp;",
       ],
-      cursorChar: "",
+      cursorChar: "_",
       typeSpeed: 70,
       loop: false,
     });
@@ -537,7 +558,7 @@ Vue官方网站中文文档：vue.js
   <script>
     anchors.options = {
       placement: "right",
-      visible: "hover",
+      visible: "false",
       
       icon: "#"
       

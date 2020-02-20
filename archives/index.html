@@ -27,7 +27,7 @@
 
 
 
-  <link rel="stylesheet" href="/lib/prettify/tomorrow-night.min.css"  >
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
 
 <link rel="stylesheet" href="/css/main.css"  >
 
@@ -179,26 +179,26 @@
     </a>
   
     
-    <a href="/2020/02/11/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-API/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">网易云音乐 API</span>
-      <span style="float: right;">02-11</span>
-    </a>
-  
-    
     <a href="/2020/02/11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/" class="list-group-item list-group-item-action">
       <span class="archive-post-title">vue练习实例</span>
       <span style="float: right;">02-11</span>
     </a>
   
     
-    <a href="/2020/02/10/vue%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">vue中的常用指令</span>
-      <span style="float: right;">02-10</span>
+    <a href="/2020/02/11/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-API/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">网易云音乐 API</span>
+      <span style="float: right;">02-11</span>
     </a>
   
     
     <a href="/2020/02/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAvue%E7%A8%8B%E5%BA%8F/" class="list-group-item list-group-item-action">
       <span class="archive-post-title">我的第一个vue程序</span>
+      <span style="float: right;">02-10</span>
+    </a>
+  
+    
+    <a href="/2020/02/10/vue%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">vue中的常用指令</span>
       <span style="float: right;">02-10</span>
     </a>
   
@@ -217,23 +217,6 @@
   </script>
 
 
-<!--Leancloud 操作库:-->
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<!--Valine 的核心代码库:-->
-<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
-
-<div class="comment"></div>
-<script>
-    new Valine({
-        // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
-        av: AV, 
-        el: '.comment', // 
-        app_id: 'aepSK01JH6MBBnycMOyG8esk-MdYXbMMI', // 这里填写上面得到的APP ID
-        app_key: 'r6fIpym2WjgJ67oqJY4Xb4t0', // 这里填写上面得到的APP KEY
-        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!', // [v1.0.7 new]留言框占位提示文字
-        verify: true // Verification code
-    });
-</script>
               </div>
             </div>
           </div>
@@ -306,13 +289,6 @@
 </footer>
 
 <!-- SCRIPTS -->
-<script>
-  window.onload = function(){
-    var img_num = 202;
-    var num = parseInt(Math.random()*(img_num+1));
-    document.getElementById("background").style.backgroundImage = "url(http://q5xub6nnz.bkt.clouddn.com/" + num + ".jpg)";
-  }
-</script>
 <script src="/lib/jquery/jquery.min.js" ></script>
 <script src="/lib/popper/popper.min.js" ></script>
 <script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
@@ -336,6 +312,18 @@
 <!-- Plugins -->
 
 
+  
+
+  
+
+  
+
+  
+
+  <!-- cnzz Analytics -->
+  
+
+
 
   <script src="/lib/prettify/prettify.min.js" ></script>
   <script>
@@ -354,7 +342,7 @@
         '  ',
         "归档&nbsp;",
       ],
-      cursorChar: "",
+      cursorChar: "_",
       typeSpeed: 70,
       loop: false,
     });
@@ -371,7 +359,7 @@
   <script>
     anchors.options = {
       placement: "right",
-      visible: "hover",
+      visible: "false",
       
       icon: "#"
       

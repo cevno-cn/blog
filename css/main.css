@@ -84,10 +84,10 @@ body a:hover {
   color: white;
 }
 .top-nav-collapse {
-  background-color: #2ab2ab;
+  background-color: #2f4154;
 }
 .navbar-col-show {
-  background-color: #2ab2ab;
+  background-color: #2f4154;
 }
 @media (max-width: 768px) {
   .navbar {
@@ -443,7 +443,8 @@ a.police-beian img {
 }
 .index-excerpt {
   margin: 0.5rem 0 0.5rem 0;
-  height: calc(1.4rem * 3);
+  height: auto;
+  max-height: calc(1.4rem * 3);
   line-height: 1.4rem;
   overflow: hidden;
 }
