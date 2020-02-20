@@ -242,8 +242,8 @@
   <script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
   <script>
-    var notify = 'false';
-    var verify = 'true';
+    var notify = 'false' === true;
+    var verify = 'true' === true;
     var oldLoad = window.onload;
     window.onload = function () {
       new Valine({
@@ -253,11 +253,11 @@
         app_id: 'aepSK01JH6MBBnycMOyG8esk-MdYXbMMI',
         app_key: 'r6fIpym2WjgJ67oqJY4Xb4t0',
         placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
-        // avatar: 'retro',
-        // meta: ['nick', 'mail', 'link'],
-        // pageSize: '10',
+        avatar: 'retro',
+        meta: ['nick', 'mail', 'link'],
+        pageSize: '10',
       });
-      // oldLoad && oldLoad();
+      oldLoad && oldLoad();
     };
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
