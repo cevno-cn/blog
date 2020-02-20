@@ -32,14 +32,6 @@
     <content type="html"><![CDATA[<p>你好！欢迎访问我的博客！</p><p>在之前搭建过很多的博客，最终都因那些博客模板的可扩展性不够好、不够美观等各种原因，没能继续使用。</p><p>我还自己写过一些静态博客，但是实际运行起来太复杂了，原理就是写一个首页，然后文章单独放在一个位置，写好一个文章就够复杂的了，写文章也只有手工打代码，并且写完之后，发布上去，还需要手动修改首页内容，我感觉这样的博客虽然是自己写的，有最高的权限，但是很low。</p><p>知道我发现了hexo博客框架，我发现原来博客还能这么玩。</p><p>hexo的优点不必我多说，大家应该都有所耳闻。</p><p>刚一开始我是把博客存放到码云上的，但是最终我用了GitHub…原因就不说了，大家都懂-_-</p><p>以后不出意外的话，也将继续使用hexo写博客，分享我的生活。</p><p>别的也不说了，我们一起进步吧 //^_^//</p><h5 id="我的旧博客"><a href="#我的旧博客" class="headerlink" title="我的旧博客"></a>我的旧博客</h5><h6 id="1-Old-Blog"><a href="#1-Old-Blog" class="headerlink" title="1. Old Blog"></a>1. <a href="http://ganto.top" target="_blank" rel="noopener">Old Blog</a></h6><h6 id="2-码云Blog"><a href="#2-码云Blog" class="headerlink" title="2. 码云Blog"></a>2. <a href="https://ganto_blog.gitee.io/blog" target="_blank" rel="noopener">码云Blog</a></h6>]]></content>
     
     
-    <categories>
-      
-      <category>闲聊</category>
-      
-      <category>hexo</category>
-      
-    </categories>
-    
     
     <tags>
       
@@ -58,12 +50,6 @@
     
     <content type="html"><![CDATA[<h2 id="国内用户无法访问GitHub解决办法"><a href="#国内用户无法访问GitHub解决办法" class="headerlink" title="国内用户无法访问GitHub解决办法"></a>国内用户无法访问GitHub解决办法</h2><h6 id="进入电脑此路径C-Windows-System32-drivers-etc，用记事本打开hosts文件，在后面添加一下字段"><a href="#进入电脑此路径C-Windows-System32-drivers-etc，用记事本打开hosts文件，在后面添加一下字段" class="headerlink" title="进入电脑此路径C:\Windows\System32\drivers\etc，用记事本打开hosts文件，在后面添加一下字段"></a>进入电脑此路径C:\Windows\System32\drivers\etc，用记事本打开hosts文件，在后面添加一下字段</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">192.30.253.112 github.com</span><br></pre></td></tr></table></figure><p>添加完成后，保存即可</p><p>因为修改的C盘文件，可能需要管理员权限</p><p>如果被电脑管家检测到风险，选择信任即可！</p>]]></content>
     
-    
-    <categories>
-      
-      <category>教程</category>
-      
-    </categories>
     
     
     <tags>
@@ -121,16 +107,6 @@
     
     <content type="html"><![CDATA[<h4 id="快速了解AXIOS"><a href="#快速了解AXIOS" class="headerlink" title="快速了解AXIOS"></a>快速了解AXIOS</h4><h5 id="什么是axios"><a href="#什么是axios" class="headerlink" title="什么是axios"></a>什么是axios</h5><p>Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。</p><h5 id="axios的特性"><a href="#axios的特性" class="headerlink" title="axios的特性"></a>axios的特性</h5><ul><li>从浏览器中创建 XMLHttpRequests</li><li>从 node.js 创建 http 请求</li><li>支持 Promise API</li><li>拦截请求和响应</li><li>转换请求数据和响应数据</li><li>取消请求</li><li>自动转换 JSON 数据</li><li>客户端支持防御 XSRF</li></ul><h4 id="部署到项目中"><a href="#部署到项目中" class="headerlink" title="部署到项目中"></a>部署到项目中</h4><p>直接导入在线js库，就可以在项目中使用axios了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;axios&#x2F;dist&#x2F;axios.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">"https://autumnfish.cn/api/joke/list?num=1"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">success</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(success);</span><br><span class="line">&#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>此链接：<a href="https://autumnfish.cn/api/joke/list?num=1为获取随机笑话的api接口" target="_blank" rel="noopener">https://autumnfish.cn/api/joke/list?num=1为获取随机笑话的api接口</a></p><h4 id="AXIOS与VUE结合使用"><a href="#AXIOS与VUE结合使用" class="headerlink" title="AXIOS与VUE结合使用"></a>AXIOS与VUE结合使用</h4><p>将axios请求数据代码添加入methods中，其他的语法和非vue项目中请求一样</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">methods:&#123;</span><br><span class="line">  axios.get(<span class="string">"请求数据地址"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">success</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(success);</span><br><span class="line">  &#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
-    
-    <categories>
-      
-      <category>vue</category>
-      
-      <category>axios</category>
-      
-      <category>教程</category>
-      
-    </categories>
     
     
     <tags>
@@ -234,14 +210,6 @@
     <content type="html"><![CDATA[<h1 id="我的第一个VUE程序"><a href="#我的第一个VUE程序" class="headerlink" title="我的第一个VUE程序"></a>我的第一个VUE程序</h1><p>此文章只是记录自己的vue学习情况文档！方便日后自己查询。</p><h2 id="VUE-JS相关资料"><a href="#VUE-JS相关资料" class="headerlink" title="VUE.JS相关资料"></a>VUE.JS相关资料</h2><h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul><li><p>Vue官方网站中文文档：<a href="https://cn.vuejs.org/" target="_blank" rel="noopener">vue.js</a></p></li><li><p>部署vue项目：只需在html文件下引用下方代码，就可以直接将vue部署到项目中</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></li></ul><h2 id="我的第一个VUE程序：HELLO-VUE"><a href="#我的第一个VUE程序：HELLO-VUE" class="headerlink" title="我的第一个VUE程序：HELLO VUE!"></a>我的第一个VUE程序：HELLO VUE!</h2><p>html代码</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">&#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p>js代码</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">el:<span class="string">"#app"</span>,</span><br><span class="line">data:&#123;</span><br><span class="line">message:<span class="string">"Hello Vue!"</span></span><br><span class="line">&#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><p>​    <font color="red"><strong>注意：</strong></font>编写的vue项目中的js代码，至少要放到body下的最后一个结束标签后面</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">&#123;&#123;message&#125;&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    var app &#x3D; new Vue(&#123;</span><br><span class="line">    el:&quot;#app&quot;,</span><br><span class="line">    data:&#123;</span><br><span class="line">    message:&quot;Hello Vue!&quot;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>渐进式 JavaScript 框架</p>]]></content>
     
     
-    <categories>
-      
-      <category>vue</category>
-      
-      <category>学习</category>
-      
-    </categories>
-    
     
     <tags>
       
@@ -279,12 +247,6 @@
     
     <content type="html"><![CDATA[<h2 id="hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d"><a href="#hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d" class="headerlink" title="$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d"></a>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</h2><h6 id="git上传码云代码，第一次上传路径有问题，第二次覆盖上传，即便路径修改对了（码云源码都正确了），访问网页还是路径错误，你必须得从新建库，重新上传才行，要不然那个错误将永远留在那里，我是真搞不懂为什么会这样"><a href="#git上传码云代码，第一次上传路径有问题，第二次覆盖上传，即便路径修改对了（码云源码都正确了），访问网页还是路径错误，你必须得从新建库，重新上传才行，要不然那个错误将永远留在那里，我是真搞不懂为什么会这样" class="headerlink" title="git上传码云代码，第一次上传路径有问题，第二次覆盖上传，即便路径修改对了（码云源码都正确了），访问网页还是路径错误，你必须得从新建库，重新上传才行，要不然那个错误将永远留在那里，我是真搞不懂为什么会这样"></a>git上传码云代码，第一次上传路径有问题，第二次覆盖上传，即便路径修改对了（码云源码都正确了），访问网页还是路径错误，你必须得从新建库，重新上传才行，要不然那个错误将永远留在那里，我是真搞不懂为什么会这样</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这个问题我知道因为什么了，因为需要更新码云中的 Pages 服务，就是重启一下，这其实很不方便</span><br></pre></td></tr></table></figure>]]></content>
     
-    
-    <categories>
-      
-      <category>测试</category>
-      
-    </categories>
     
     
     <tags>
