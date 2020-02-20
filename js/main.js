@@ -94,3 +94,7 @@ $(document).ready(function () {
     });
   });
 });
+
+var img_num = 202;
+var num = parseInt(Math.random()*(img_num+1));
+document.getElementById("background").style.backgroundImage = "url(http://q5xub6nnz.bkt.clouddn.com/" + num + ".jpg)";
