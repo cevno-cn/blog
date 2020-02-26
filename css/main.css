@@ -324,6 +324,13 @@ a.police-beian img {
 .code {
   display: inline-block;
 }
+.L0 {
+  display: inline-block;
+  padding: 0;
+}
+.markdown-body ol {
+  padding: 0;
+}
 @-moz-keyframes scroll-down {
   0% {
     opacity: 0.8;
