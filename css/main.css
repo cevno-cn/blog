@@ -6,7 +6,7 @@ header,
   overflow-wrap: break-word;
 }
 body {
-  background-color: #eee;
+  background-color: #fff;
   color: #3c4858;
 }
 body a {
@@ -140,6 +140,7 @@ body a:hover {
   position: fixed;
   background: #fff;
   border-radius: 4px;
+  border-radius: 50%;
   width: 40px;
   height: 40px;
   bottom: -60px;
@@ -152,6 +153,10 @@ body a:hover {
   display: flex;
   display: -webkit-flex;
   align-items: center;
+}
+#scroll-top-button:hover {
+  background-color: #2ab2ab;
+  transition: all 1s;
 }
 #scroll-top-button i {
   -webkit-transform: translateZ(0);
