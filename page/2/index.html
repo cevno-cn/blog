@@ -152,6 +152,52 @@
     
     
     <div class="col-12 col-md-8 mx-auto index-info">
+      <a href="/2020/02/15/%E5%85%B3%E4%BA%8EJavaScript%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E6%95%B4%E7%90%86/">
+        <p class="h4 index-header">关于JavaScript中常用方法的整理</p>
+      </a>
+
+      <a href="/2020/02/15/%E5%85%B3%E4%BA%8EJavaScript%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E6%95%B4%E7%90%86/">
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">SPLICEsplice的用法有很多，主要是对数组进行操作，下面一一分析
+splice向数组中添加/删除元素：
+添加
+12var fruits &#x3D; [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];fruits.splice(2,0,&quot;Lemon&quot;,&quot;Kiwi&quot;);
+
+数组fruits输出结果
+1Banana,Orange,Lemon,Kiwi,Apple,Mango
+
+splice(2,0,”Lemon”,”Kiwi”)的意思是，在数组下标为2的位置插入Lemon、Kiwi，其中0的意思是不删除原本下标为2的元素Apple，而是将插入的元素从下标2开始插入原本位置的元素往后走
+删除
+12var arr &#x3D; [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];fruits.splice(2,2);
+
+数组arr输出结果
+1</div>
+        </div>
+      </a>
+
+      <div class="index-btm">
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-15&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/JavaScript">JavaScript</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
       <a href="/2020/02/11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
         <p class="h4 index-header">axios使用方法</p>
       </a>
@@ -330,57 +376,6 @@ v-html123&lt;div id="app"&gt; &lt;span v-html="message"&gt;&lt;span&gt;&lt</div>
           
             <a href="/categories/%E5%AD%A6%E4%B9%A0">学习</a>&nbsp;
           &nbsp;
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/vue">vue</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-8 mx-auto index-info">
-      <a href="/2020/02/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAvue%E7%A8%8B%E5%BA%8F/">
-        <p class="h4 index-header">我的第一个vue程序</p>
-      </a>
-
-      <a href="/2020/02/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAvue%E7%A8%8B%E5%BA%8F/">
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">我的第一个VUE程序此文章只是记录自己的vue学习情况文档！方便日后自己查询。
-VUE.JS相关资料准备工作
-Vue官方网站中文文档：vue.js
-
-部署vue项目：只需在html文件下引用下方代码，就可以直接将vue部署到项目中
-1&lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;
-
-
-
-
-
-我的第一个VUE程序：HELLO VUE!html代码
-123&lt;div id="app"&gt;	&#123;&#123;message&#125;&#125;&lt;/div&gt;
-
-js代码
-12345678&lt;script&gt;	var app = new Vue(&#123;		el:"#app",		data:&#123;			message:"Hello Vue!"		&#125;    &#125;)&lt;/script&gt;
-
-​    注意：编写的vue项目中的js代码，至少要放到body下的最后一个结束标签后面
-1234567891011121314</div>
-        </div>
-      </a>
-
-      <div class="index-btm">
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-10&nbsp;&nbsp;
-        
         
         
           <i class="iconfont icon-tag"></i>
