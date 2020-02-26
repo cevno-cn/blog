@@ -308,6 +308,9 @@ a.police-beian img {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.info {
+  display: none;
+}
 @-moz-keyframes scroll-down {
   0% {
     opacity: 0.8;
