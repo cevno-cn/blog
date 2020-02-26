@@ -29,9 +29,8 @@ body a:hover {
 }
 #board {
   position: relative;
-  margin-top: -3rem;
   background-color: white;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   z-index: 3;
 }
 @media (max-width: 768px) {
@@ -120,7 +119,7 @@ body a:hover {
   position: absolute;
   width: 100%;
   font-size: 2rem;
-  height: 8rem;
+  height: 4rem;
   text-align: center;
   cursor: pointer;
   bottom: 0;
