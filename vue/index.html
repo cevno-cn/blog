@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Vue音乐_Ganto</title>
         <link rel="stylesheet" href="css/index.css">
-        <link rel="shortcut icon" type="text/css" href="http://ganto.xyz/images/favicon.ico"/>
+        <link rel="shortcut icon" type="text/css" href="http://ganto.xyz/images/favicon.ico">
     <meta name="generator" content="Hexo 4.2.0"></head>
     <body>
         <div id="box">
@@ -14,7 +14,7 @@
                     <span>G</span>
                     <div class="search">
                         <input type="text" placeholder="请输入歌手名字" class="text" v-model="city" @keyup.enter="getjoke">
-                        <input type="button" class="button" value="搜索" @click="getjoke" >
+                        <input type="button" class="button" value="搜索" @click="getjoke">
                     </div>
                     <span>Vue_Ganto</span>
                 </div>
@@ -24,10 +24,10 @@
                 <div class="section">
                     <div class="nar">
                         <span class="name">{{ name }}</span>
-                        <img class="img" :src="imgUrl" alt="">
+                        <img class="img" :src="imgUrl" alt>
                     </div>
                     <div class="lyric">
-                        <span v-for="lrc in lyric">{{ lrc.toString().substring(10,)  }}</br></span>
+                        <span v-for="lrc in lyric">{{ lrc.toString().substring(10,)  }}<br></span>
                     </div>
                 </div>
                 <audio autoplay controls loop :src="url"></audio>
