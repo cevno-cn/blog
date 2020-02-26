@@ -311,6 +311,19 @@ a.police-beian img {
 .info {
   display: none;
 }
+.gutter {
+  display: none;
+}
+.markdown-body table tr {
+  border: 0;
+}
+.markdown-body table td {
+  border: 0;
+  padding: 0;
+}
+.code {
+  display: inline-block;
+}
 @-moz-keyframes scroll-down {
   0% {
     opacity: 0.8;
