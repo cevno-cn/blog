@@ -15,7 +15,7 @@
   <meta name="description" content="Ganto的网站">
   <meta name="author" content="Ganto">
   <meta name="keywords" content>
-  <title>归档 _ Ganto</title>
+  <title>sitemap _ Ganto</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
@@ -38,7 +38,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 50vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">&nbsp;<strong>Ganto</strong>&nbsp;</a>
@@ -109,7 +109,7 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background" parallax="true" style="background: url('')no-repeat center center;
+    <div class="view intro-2" id="background" false style="background: url('')no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask rgba-black-light flex-center">
@@ -118,6 +118,41 @@
               
             </span>
 
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期三, 二月 26日 2020, 10:08 晚上
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    135 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      1 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
             
           </div>
 
@@ -129,71 +164,98 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <p>使用npm安装适用于百度的自动生成sitemap.xml文件的插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap --save &#x2F;&#x2F;安装适用于百度的自动生成sitemap.xml文件的插件</span><br></pre></td></tr></table></figure>
+
+<p>在hexo根目录配置文件中添加下列字段</p>
+<blockquote>
+<p>baidusitemap:<br>  path: baidusitemap.xml</p>
+</blockquote>
+<p>这样在执行<code>hexo g</code>生成静态文件的时候，会在public目录下生成baidusitemap.xml文件，则表示安装成功</p>
+<p>sitemap.xml文件的作用就是给百度蜘蛛爬取数据用的</p>
+<p>sitemap.xml文件又被称为“网站地图”</p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
                 
-
-<div class="list-group">
-  <p class="h4">共计 14 篇文章</p>
-  <hr>
-  
-    
-      
-      <p class="h5">2020</p>
-    
-    <a href="/2020-02-10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAvue%E7%A8%8B%E5%BA%8F/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">我的第一个vue程序</span>
-      <span style="float: right;">02-10</span>
-    </a>
-  
-    
-      
-      <p class="h5">2010</p>
-    
-    <a href="/2010-02-20/test/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">test</span>
-      <span style="float: right;">02-20</span>
-    </a>
-  
-    
-      
-      <p class="h5">2000</p>
-    
-    <a href="/2000-06-15/hexo-clean-hexo-g-hexo-d/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span>
-      <span style="float: right;">06-15</span>
-    </a>
-  
-    
-    <a href="/2000-06-15/hello-world/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Hello World</span>
-      <span style="float: right;">06-15</span>
-    </a>
-  
-</div>
-
-  <nav aria-label="index posts navigation">
-    <span class="pagination pg-blue justify-content-center mt-5" id="pagination">
-      <a class="extend prev" rel="prev" href="/archives/"><i class="fas fa-angle-double-left"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </span>
-  </nav>
-  
-  <script>
-    for (ele of document.getElementById("pagination").getElementsByClassName("page-number")) {
-      ele.href += '#board';
-    }
-  </script>
-
-
-              </div>
-            </div>
+                  <a class="hover-with-bg" href="/tags/sitemap">sitemap</a>
+                
+              </span>
+            
+            </p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+  <div id="vcomments" style="width: 100%; margin: 0 auto;"></div>
+  <script defer src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script>
+    var notify = 'false' === true;
+    var verify = 'true' === true;
+    var oldLoad = window.onload;
+    window.onload = function () {
+      new Valine({
+        el: '#vcomments',
+        notify: notify,
+        verify: verify,
+        app_id: "aepSK01JH6MBBnycMOyG8esk-MdYXbMMI",
+        app_key: "r6fIpym2WjgJ67oqJY4Xb4t0",
+        placeholder: "^_^说说你的看法吧！",
+        avatar: "monsterid",
+        meta: ['nick', 'mail', 'link'],
+        pageSize: "10",
+      });
+      oldLoad && oldLoad();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="external nofollow noopener noreferrer">comments
+      powered by Valine.</a></noscript>
+
+
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -272,6 +334,11 @@
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js"></script>
+  
+  <script src="/js/post.js"></script>
+
 
 
   <script src="/lib/smoothscroll/SmoothScroll.min.js"></script>
@@ -325,7 +392,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "归档&nbsp;",
+        "sitemap&nbsp;",
       ],
       cursorChar: "",
       typeSpeed: 70,
