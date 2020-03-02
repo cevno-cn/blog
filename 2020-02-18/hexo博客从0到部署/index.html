@@ -132,7 +132,7 @@
                   
                   &nbsp;<i class="far fa-chart-bar"></i>
                   <span class="post-count">
-                    949 字
+                    1k 字
                   </span>&nbsp;
                 
 
@@ -140,7 +140,7 @@
                   
                   &nbsp;<i class="far fa-clock"></i>
                   <span class="post-count">
-                      3 分钟
+                      4 分钟
                   </span>&nbsp;
                 
 
@@ -213,10 +213,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 <p>执行成功后，会在文件夹中多出一个<strong>.deploy_git</strong>文件夹</p>
+<p>然后执行下面代码提交你的邮箱和用户名（这里指的是你的码云邮箱、用户名或者GitHub邮箱、用户名）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email “你的邮箱”</span><br><span class="line">git config --global user.name “用户名”</span><br></pre></td></tr></table></figure>
+
+<p>接着执行以下操作将代码推送到上去</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
 
 <p>这时会弹出账号密码框，这里的账号密码是码云的账号密码，注意别把名字当成账号，账号一般都是手机号或者邮箱地址</p>
-<p>成功提交代码后，我们会在码云仓库看到我们提交的代码</p>
+<p>成功提交代码后，我们会在码云/GitHub仓库看到我们提交的代码</p>
 <h2 id="搭建后出现的一系列问题"><a href="#搭建后出现的一系列问题" class="headerlink" title="搭建后出现的一系列问题"></a>搭建后出现的一系列问题</h2><ol>
 <li><p>码云Gitee Pages 普通版，每次提交代码后，都需要手动更新 Pages 服务（重启 Pages 服务），可以免费使用一个月pro版，坑</p>
 </li>
