@@ -192,6 +192,57 @@ splice(2,0,”Lemon”,”Kiwi”)的意思是，在数组下标为2的位置插
     
     
     <div class="col-12 col-md-8 mx-auto index-info">
+      <a href="/2020-02-11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
+        <p class="h4 index-header">axios使用方法</p>
+      </a>
+
+      <a href="/2020-02-11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
+        
+        
+          
+        
+        <div class="index-excerpt">
+          <div class="index-text mb-1">快速了解AXIOS什么是axiosAxios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。
+axios的特性
+从浏览器中创建 XMLHttpRequests
+从 node.js 创建 http 请求
+支持 Promise API
+拦截请求和响应
+转换请求数据和响应数据
+取消请求
+自动转换 JSON 数据
+客户端支持防御 XSRF
+
+部署到项目中直接导入在线js库，就可以在项目中使用axios了
+1&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;axios&#x2F;dist&#x2F;axios.min.js&quot;&gt;&lt;&#x2F;script&gt;
+
+
+
+语法12345axios.get("https://autumnfish.cn/api/joke/list?num=1").then(function(success)&#123;  console.log(success);&#125;).catch(function(error)&#123;  cons</div>
+        </div>
+      </a>
+
+      <div class="index-btm">
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-11&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/vue">vue</a>&nbsp;
+          
+            <a href="/tags/axios">axios</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
       <a href="/2020-02-11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/">
         <p class="h4 index-header">vue练习实例</p>
       </a>
@@ -274,57 +325,6 @@ splice(2,0,”Lemon”,”Kiwi”)的意思是，在数组下标为2的位置插
           <i class="iconfont icon-tag"></i>
           
             <a href="/tags/api">api</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-8 mx-auto index-info">
-      <a href="/2020-02-11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
-        <p class="h4 index-header">axios使用方法</p>
-      </a>
-
-      <a href="/2020-02-11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
-        
-        
-          
-        
-        <div class="index-excerpt">
-          <div class="index-text mb-1">快速了解AXIOS什么是axiosAxios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。
-axios的特性
-从浏览器中创建 XMLHttpRequests
-从 node.js 创建 http 请求
-支持 Promise API
-拦截请求和响应
-转换请求数据和响应数据
-取消请求
-自动转换 JSON 数据
-客户端支持防御 XSRF
-
-部署到项目中直接导入在线js库，就可以在项目中使用axios了
-1&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;axios&#x2F;dist&#x2F;axios.min.js&quot;&gt;&lt;&#x2F;script&gt;
-
-
-
-语法12345axios.get("https://autumnfish.cn/api/joke/list?num=1").then(function(success)&#123;  console.log(success);&#125;).catch(function(error)&#123;  cons</div>
-        </div>
-      </a>
-
-      <div class="index-btm">
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-11&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/vue">vue</a>&nbsp;
-          
-            <a href="/tags/axios">axios</a>&nbsp;
           
         
       </div>
@@ -601,52 +601,51 @@ v-html123&lt;div id="app"&gt; &lt;span v-html="message"&gt;&lt;span&gt;&lt</div>
 
   
   
-    <script>
-      !function (e, t, a) {
-        function r() {
-          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
-          requestAnimationFrame(r)
-        }
-
-        function n() {
-          var t = "function" == typeof e.onclick && e.onclick;
-          e.onclick = function (e) {
-            t && t(), o(e)
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
           }
-        }
-
-        function o(e) {
-          var a = t.createElement("div");
-          a.className = "heart", s.push({
-            el: a,
-            x: e.clientX - 5,
-            y: e.clientY - 5,
-            scale: 1,
-            alpha: 1,
-            color: c()
-          }), t.body.appendChild(a)
-        }
-
-        function i(e) {
-          var a = t.createElement("style");
-          a.type = "text/css";
-          try {
-            a.appendChild(t.createTextNode(e))
-          } catch (t) {
-            a.styleSheet.cssText = e
-          }
-          t.getElementsByTagName("head")[0].appendChild(a)
-        }
-
-        function c() {
-          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
-        }
-
-        var s = [];
-        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
-          setTimeout(e, 1e3 / 60)
-        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
-      }(window, document);
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
     </script>
   
 

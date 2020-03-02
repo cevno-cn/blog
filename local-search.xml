@@ -120,6 +120,27 @@
   
   
   <entry>
+    <title>axios使用方法</title>
+    <link href="/2020-02-11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <url>/2020-02-11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<h4 id="快速了解AXIOS"><a href="#快速了解AXIOS" class="headerlink" title="快速了解AXIOS"></a>快速了解AXIOS</h4><h5 id="什么是axios"><a href="#什么是axios" class="headerlink" title="什么是axios"></a>什么是axios</h5><p>Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。</p><h5 id="axios的特性"><a href="#axios的特性" class="headerlink" title="axios的特性"></a>axios的特性</h5><ul><li>从浏览器中创建 XMLHttpRequests</li><li>从 node.js 创建 http 请求</li><li>支持 Promise API</li><li>拦截请求和响应</li><li>转换请求数据和响应数据</li><li>取消请求</li><li>自动转换 JSON 数据</li><li>客户端支持防御 XSRF</li></ul><h4 id="部署到项目中"><a href="#部署到项目中" class="headerlink" title="部署到项目中"></a>部署到项目中</h4><p>直接导入在线js库，就可以在项目中使用axios了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;axios&#x2F;dist&#x2F;axios.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">"https://autumnfish.cn/api/joke/list?num=1"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">success</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(success);</span><br><span class="line">&#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>此链接：<a href="https://autumnfish.cn/api/joke/list?num=1为获取随机笑话的api接口" target="_blank" rel="external nofollow noopener noreferrer">https://autumnfish.cn/api/joke/list?num=1为获取随机笑话的api接口</a></p><h4 id="AXIOS与VUE结合使用"><a href="#AXIOS与VUE结合使用" class="headerlink" title="AXIOS与VUE结合使用"></a>AXIOS与VUE结合使用</h4><p>将axios请求数据代码添加入methods中，其他的语法和非vue项目中请求一样</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">methods:&#123;</span><br><span class="line">  axios.get(<span class="string">"请求数据地址"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">success</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(success);</span><br><span class="line">  &#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vue</tag>
+      
+      <tag>axios</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>vue练习实例</title>
     <link href="/2020-02-11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/"/>
     <url>/2020-02-11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/</url>
@@ -166,27 +187,6 @@
     <tags>
       
       <tag>api</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>axios使用方法</title>
-    <link href="/2020-02-11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
-    <url>/2020-02-11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
-    
-    <content type="html"><![CDATA[<h4 id="快速了解AXIOS"><a href="#快速了解AXIOS" class="headerlink" title="快速了解AXIOS"></a>快速了解AXIOS</h4><h5 id="什么是axios"><a href="#什么是axios" class="headerlink" title="什么是axios"></a>什么是axios</h5><p>Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。</p><h5 id="axios的特性"><a href="#axios的特性" class="headerlink" title="axios的特性"></a>axios的特性</h5><ul><li>从浏览器中创建 XMLHttpRequests</li><li>从 node.js 创建 http 请求</li><li>支持 Promise API</li><li>拦截请求和响应</li><li>转换请求数据和响应数据</li><li>取消请求</li><li>自动转换 JSON 数据</li><li>客户端支持防御 XSRF</li></ul><h4 id="部署到项目中"><a href="#部署到项目中" class="headerlink" title="部署到项目中"></a>部署到项目中</h4><p>直接导入在线js库，就可以在项目中使用axios了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;axios&#x2F;dist&#x2F;axios.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">"https://autumnfish.cn/api/joke/list?num=1"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">success</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(success);</span><br><span class="line">&#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>此链接：<a href="https://autumnfish.cn/api/joke/list?num=1为获取随机笑话的api接口" target="_blank" rel="external nofollow noopener noreferrer">https://autumnfish.cn/api/joke/list?num=1为获取随机笑话的api接口</a></p><h4 id="AXIOS与VUE结合使用"><a href="#AXIOS与VUE结合使用" class="headerlink" title="AXIOS与VUE结合使用"></a>AXIOS与VUE结合使用</h4><p>将axios请求数据代码添加入methods中，其他的语法和非vue项目中请求一样</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">methods:&#123;</span><br><span class="line">  axios.get(<span class="string">"请求数据地址"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">success</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(success);</span><br><span class="line">  &#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vue</tag>
-      
-      <tag>axios</tag>
       
     </tags>
     
