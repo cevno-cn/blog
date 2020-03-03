@@ -331,6 +331,9 @@ a.police-beian img {
 .markdown-body ol {
   padding: 0;
 }
+#background {
+  transition: all 1s;
+}
 @-moz-keyframes scroll-down {
   0% {
     opacity: 0.8;

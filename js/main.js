@@ -95,9 +95,60 @@ $(document).ready(function () {
   });
 });
 
-var img_num = 202;
+
+
+
+
+
+
+// 背景图片
+// var img_num = 202;
+// var num = parseInt(Math.random()*(img_num+1));
+// document.getElementById("background").style.backgroundImage = "url(http://say.ganto.xyz/images/" + num + ".jpg)";
+// setInterval(function(){
+//   num = parseInt(Math.random()*(img_num+1));
+//   document.getElementById("background").style.backgroundImage = "url(http://say.ganto.xyz/images/" + num + ".jpg)";
+// },1000);
+
+var img_num = 202; // 图片总数
+				
+//预加载图片（多往后加载出来一张图片）
+var list = [];
+var a = parseInt(Math.random()*(img_num+1) ),
+    b = parseInt(Math.random()*(img_num+1));
+list.push(a, b);
+// console.log(list.length);
+var count = 0;
 var num = parseInt(Math.random()*(img_num+1));
-document.getElementById("background").style.backgroundImage = "url(http://say.ganto.xyz/images/" + num + ".jpg)";
+
+// console.log("click_num/"+num);
+// console.log("click_list/"+list);
+// console.log("click_count"+count+'\n---------------------');
+
+
+function load() {
+  var imgObj = new Image();
+  imgObj.src = "http://say.ganto.xyz/images/"+list[list.length-1]+".jpg";
+}
+$('#background').css("background-image","url(http://say.ganto.xyz/images/"+list[count]+".jpg)");
+load();
+
+setInterval(function(){
+  num = parseInt(Math.random()*(img_num+1));
+  // console.log("setInterval_num/"+num);
+  list.push(num);
+  // console.log("setInterval_list/"+list);
+  count++;
+  // console.log("setInterval_count"+count+'------------');
+  $('#background').css("background-image","url(http://say.ganto.xyz/images/"+list[count]+".jpg)");
+  load();
+},60000);
+
+
+
+
+
+
 
 // 百度收录
 (function(){
