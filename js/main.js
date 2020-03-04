@@ -128,9 +128,9 @@ var num = parseInt(Math.random()*(img_num+1));
 
 function load() {
   var imgObj = new Image();
-  imgObj.src = "http://say.ganto.xyz/images/"+list[list.length-1]+".jpg";
+  imgObj.src = "http://photo.ganto.xyz/"+list[list.length-1]+".jpg";
 }
-$('#background').css("background-image","url(http://say.ganto.xyz/images/"+list[count]+".jpg)");
+$('#background').css("background-image","url(http://photo.ganto.xyz/"+list[count]+".jpg)");
 load();
 
 setInterval(function(){
@@ -140,7 +140,7 @@ setInterval(function(){
   // console.log("setInterval_list/"+list);
   count++;
   // console.log("setInterval_count"+count+'------------');
-  $('#background').css("background-image","url(http://say.ganto.xyz/images/"+list[count]+".jpg)");
+  $('#background').css("background-image","url(http://photo.ganto.xyz/"+list[count]+".jpg)");
   load();
 },60000);
 
