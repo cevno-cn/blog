@@ -86,10 +86,10 @@ body a:hover {
   color: white;
 }
 .top-nav-collapse {
-  background-color: #2ba2ba;
+  background-color: #2ab2ab;
 }
 .navbar-col-show {
-  background-color: #2ba2ba;
+  background-color: #2ab2ab;
 }
 @media (max-width: 768px) {
   .navbar {
@@ -333,6 +333,15 @@ a.police-beian img {
 }
 #background {
   transition: all 0.1s;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #2ab2ab;
+/* border-left: 2px solid white;
+	border-right: 2px solid white; */
 }
 @-moz-keyframes scroll-down {
   0% {
