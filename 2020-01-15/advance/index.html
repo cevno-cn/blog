@@ -156,13 +156,122 @@
           <div class="markdown-body">
             <p>图片预加载可以预先加载好网页所需的图片，在网页需要某一张图片时，无需再从服务器请求图片数据，直接从缓存文件中获取所需的图片。 图片预加载，极大的提升了用户体验！</p>
 <p>完整代码贴在了下面，仅供参考！本文预加载只预加载一张图片，每个人都有各自的需求，可以直接复制此处的代码使用，也可以修改后使用！</p>
-<h2 id="引用jQuery库"><a href="#引用jQuery库" class="headerlink" title="引用jQuery库"></a>引用jQuery库</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/jquery/3.4.1/jquery.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="引用jQuery库"><a href="#引用jQuery库" class="headerlink" title="引用jQuery库"></a>引用jQuery库</h2><pre><code class="html">&lt;script src=&quot;https://cdn.bootcss.com/jquery/3.4.1/jquery.js&quot;&gt;&lt;/script&gt;</code></pre>
+<h2 id="js代码部分"><a href="#js代码部分" class="headerlink" title="js代码部分"></a>js代码部分</h2><pre><code class="js">/**
+*预加载图片（多往后加载出来一张图片）
+*/
 
-<h2 id="js代码部分"><a href="#js代码部分" class="headerlink" title="js代码部分"></a>js代码部分</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*预加载图片（多往后加载出来一张图片）</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化代码</span></span><br><span class="line"><span class="keyword">var</span> list = [];</span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random()*<span class="number">5</span>),</span><br><span class="line">    b = <span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random()*<span class="number">5</span>);</span><br><span class="line">list.push(a, b);</span><br><span class="line"><span class="comment">// console.log(list.length);</span></span><br><span class="line"><span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> num = <span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random()*<span class="number">111</span>);</span><br><span class="line"><span class="comment">// console.log("click_num/"+num);</span></span><br><span class="line"><span class="comment">// console.log("click_list/"+list);</span></span><br><span class="line"><span class="comment">// console.log("click_count"+count+'\n---------------------');</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 图片加载函数，图片会在后台默默加载</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">load</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> imgObj = <span class="keyword">new</span> Image();</span><br><span class="line">    imgObj.src = <span class="string">"http://say.ganto.xyz/images/"</span>+list[list.length<span class="number">-1</span>]+<span class="string">".jpg"</span>;</span><br><span class="line">&#125;</span><br><span class="line">$(<span class="string">'.box'</span>).css(<span class="string">"background-image"</span>,<span class="string">"url(http://say.ganto.xyz/images/"</span>+list[count]+<span class="string">".jpg)"</span>);</span><br><span class="line">load();</span><br><span class="line"></span><br><span class="line"><span class="comment">//点击box</span></span><br><span class="line">$(<span class="string">'.box'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    num = <span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random()*<span class="number">111</span>);</span><br><span class="line">    <span class="comment">// console.log("click_num/"+num);</span></span><br><span class="line">    list.push(num);</span><br><span class="line">    <span class="comment">// console.log("click_list/"+list);</span></span><br><span class="line">    count++;</span><br><span class="line">    <span class="comment">// console.log("click_count"+count+'\n---------------------');</span></span><br><span class="line">    $(<span class="string">'.box'</span>).css(<span class="string">"background-image"</span>,<span class="string">"url(http://say.ganto.xyz/images/"</span>+list[count]+<span class="string">".jpg)"</span>);</span><br><span class="line">    load();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置定时器</span></span><br><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    num = <span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random()*<span class="number">111</span>);</span><br><span class="line">    <span class="comment">// console.log("setInterval_num/"+num);</span></span><br><span class="line">    list.push(num);</span><br><span class="line">    <span class="comment">// console.log("setInterval_list/"+list);</span></span><br><span class="line">    count++;</span><br><span class="line">    <span class="comment">// console.log("setInterval_count"+count+'------------');</span></span><br><span class="line">    $(<span class="string">'.box'</span>).css(<span class="string">"background-image"</span>,<span class="string">"url(http://say.ganto.xyz/images/"</span>+list[count]+<span class="string">".jpg)"</span>);</span><br><span class="line">    load();</span><br><span class="line">&#125;,<span class="number">5000</span>);</span><br></pre></td></tr></table></figure>
+//初始化代码
+var list = [];
+var a = parseInt(Math.random()*5),
+    b = parseInt(Math.random()*5);
+list.push(a, b);
+// console.log(list.length);
+var count = 0;
+var num = parseInt(Math.random()*111);
+// console.log(&quot;click_num/&quot;+num);
+// console.log(&quot;click_list/&quot;+list);
+// console.log(&quot;click_count&quot;+count+&#39;\n---------------------&#39;);
 
-<h2 id="html代码部分"><a href="#html代码部分" class="headerlink" title="html代码部分"></a>html代码部分</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">onkeyup</span>=<span class="string">"this.value=this.value.replace(/[^a-z_^0-9]/ig,'');"</span> <span class="attr">placeholder</span>=<span class="string">"输入快递单号"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>查询<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+// 图片加载函数，图片会在后台默默加载
+function load() {
+    var imgObj = new Image();
+    imgObj.src = &quot;http://say.ganto.xyz/images/&quot;+list[list.length-1]+&quot;.jpg&quot;;
+}
+$(&#39;.box&#39;).css(&quot;background-image&quot;,&quot;url(http://say.ganto.xyz/images/&quot;+list[count]+&quot;.jpg)&quot;);
+load();
 
-<h2 id="css代码部分"><a href="#css代码部分" class="headerlink" title="css代码部分"></a>css代码部分</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">min-width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">min-height</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">    <span class="attribute">background-size</span>: cover;</span><br><span class="line">    <span class="attribute">background-position</span>: center;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">2s</span> ease;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">form</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">input</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">outline</span>: none;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">8</span>);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">1px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">button</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">8</span>);</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">outline</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> dashed white;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">cursor</span>: move;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+//点击box
+$(&#39;.box&#39;).click(function(){
+    num = parseInt(Math.random()*111);
+    // console.log(&quot;click_num/&quot;+num);
+    list.push(num);
+    // console.log(&quot;click_list/&quot;+list);
+    count++;
+    // console.log(&quot;click_count&quot;+count+&#39;\n---------------------&#39;);
+    $(&#39;.box&#39;).css(&quot;background-image&quot;,&quot;url(http://say.ganto.xyz/images/&quot;+list[count]+&quot;.jpg)&quot;);
+    load();
+});
+
+//设置定时器
+setInterval(function(){
+    num = parseInt(Math.random()*111);
+    // console.log(&quot;setInterval_num/&quot;+num);
+    list.push(num);
+    // console.log(&quot;setInterval_list/&quot;+list);
+    count++;
+    // console.log(&quot;setInterval_count&quot;+count+&#39;------------&#39;);
+    $(&#39;.box&#39;).css(&quot;background-image&quot;,&quot;url(http://say.ganto.xyz/images/&quot;+list[count]+&quot;.jpg)&quot;);
+    load();
+},5000);</code></pre>
+<h2 id="html代码部分"><a href="#html代码部分" class="headerlink" title="html代码部分"></a>html代码部分</h2><pre><code class="html">&lt;div class=&quot;box&quot;&gt;
+    &lt;form&gt;
+        &lt;input onkeyup=&quot;this.value=this.value.replace(/[^a-z_^0-9]/ig,&#39;&#39;);&quot; placeholder=&quot;输入快递单号&quot;/&gt;
+        &lt;button type=&quot;button&quot;&gt;查询&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+<h2 id="css代码部分"><a href="#css代码部分" class="headerlink" title="css代码部分"></a>css代码部分</h2><pre><code class="css">*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 300px;
+    min-height: 300px;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.box form{
+    height: 30px;
+}
+.box input{
+    width: 200px;
+    height: 30px;
+    border: 0;
+    outline: none;
+    background: rgba(255, 255, 255, .8);
+    padding: 0 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 1px;
+}
+.box button{
+    display: inline-block;
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    border: 0;
+    background: rgba(255, 255, 255, .8);
+    border-radius: 5px;
+    outline: none;
+}
+span{
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    border-radius: 10px;
+    border: 1px dashed white;
+    bottom: 0;
+    color: white;
+    cursor: move;
+    padding: 10px 20px;
+}</code></pre>
+
             <hr>
           </div>
           <br>
@@ -351,7 +460,7 @@
   <script src="/lib/prettify/prettify.min.js"></script>
   <script>
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
+      $('pre').addClass('prettyprint  ');
       prettyPrint();
     })
   </script>

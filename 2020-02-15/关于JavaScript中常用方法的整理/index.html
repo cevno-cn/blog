@@ -157,82 +157,51 @@
             <h2 id="SPLICE"><a href="#SPLICE" class="headerlink" title="SPLICE"></a>SPLICE</h2><p>splice的用法有很多，主要是对<strong>数组</strong>进行操作，下面一一分析</p>
 <p>splice向数组中添加/删除元素：</p>
 <p><font color="#2ab2ab">添加</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var fruits &#x3D; [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];</span><br><span class="line">fruits.splice(2,0,&quot;Lemon&quot;,&quot;Kiwi&quot;);</span><br></pre></td></tr></table></figure>
-
-<p>数组fruits输出结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Banana,Orange,Lemon,Kiwi,Apple,Mango</span><br></pre></td></tr></table></figure>
-
-<p>splice(2,0,”Lemon”,”Kiwi”)的意思是，在数组下标为2的位置插入Lemon、Kiwi，其中0的意思是不删除原本下标为2的元素Apple，而是将插入的元素从下标2开始插入原本位置的元素往后走</p>
+<pre><code>var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];
+fruits.splice(2,0,&quot;Lemon&quot;,&quot;Kiwi&quot;);</code></pre><p>数组fruits输出结果</p>
+<pre><code>Banana,Orange,Lemon,Kiwi,Apple,Mango</code></pre><p>splice(2,0,”Lemon”,”Kiwi”)的意思是，在数组下标为2的位置插入Lemon、Kiwi，其中0的意思是不删除原本下标为2的元素Apple，而是将插入的元素从下标2开始插入原本位置的元素往后走</p>
 <p><font color="#2ab2ab">删除</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];</span><br><span class="line">fruits.splice(2,2);</span><br></pre></td></tr></table></figure>
-
-<p>数组arr输出结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1,2,5</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意:</strong> splice的返回值是被他删除的元素，这个返回值对我来说很重要，很good</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3,4</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h5><ul>
+<pre><code>var arr = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];
+fruits.splice(2,2);</code></pre><p>数组arr输出结果</p>
+<pre><code>1,2,5</code></pre><p><strong>注意:</strong> splice的返回值是被他删除的元素，这个返回值对我来说很重要，很good</p>
+<pre><code>3,4</code></pre><h5 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h5><ul>
 <li>splice() 方法用于添加或删除数组中的元素。</li>
 <li><strong>注意:</strong> 这种方法会改变原始数组。</li>
 </ul>
 <h2 id="SPLIT"><a href="#SPLIT" class="headerlink" title="SPLIT"></a>SPLIT</h2><p>split主要作用于<strong>字符串</strong>，我们常用split分割字符串成为数组</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var s &#x3D; &quot;123 456&quot;;</span><br><span class="line">var t &#x3D; s.split(&#39;&#39;);</span><br></pre></td></tr></table></figure>
-
-<p>split的返回值(变量t的值)是一个数组</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot; &quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;]</span><br></pre></td></tr></table></figure>
-
-<p>split的参数可以是空格，也可以是某个特定的字符，也可以为空，为空的话就会把每个字符包括空格都分开，进而转化成数组</p>
+<pre><code>var s = &quot;123 456&quot;;
+var t = s.split(&#39;&#39;);</code></pre><p>split的返回值(变量t的值)是一个数组</p>
+<pre><code>[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot; &quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;]</code></pre><p>split的参数可以是空格，也可以是某个特定的字符，也可以为空，为空的话就会把每个字符包括空格都分开，进而转化成数组</p>
 <p><strong>注意:</strong> 空格(“ “)和空(“”)不一样</p>
 <p>split可以写两个参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var s &#x3D; &quot;123 456&quot;;</span><br><span class="line">var t &#x3D; s.split(&#39;&#39;,3);</span><br></pre></td></tr></table></figure>
-
-<p>split的返回值结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]</span><br></pre></td></tr></table></figure>
-
-<p>split(‘’,3)其中3可以这么理解，是split将字符串转化成为数组后，只返回三个数组长度的值，这里的3不是下标，可以理解为数组长度</p>
+<pre><code>var s = &quot;123 456&quot;;
+var t = s.split(&#39;&#39;,3);</code></pre><p>split的返回值结果</p>
+<pre><code>[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]</code></pre><p>split(‘’,3)其中3可以这么理解，是split将字符串转化成为数组后，只返回三个数组长度的值，这里的3不是下标，可以理解为数组长度</p>
 <h2 id="SLICE"><a href="#SLICE" class="headerlink" title="SLICE"></a>SLICE</h2><p><font color="#2ab2ab">slice在数组中读取元素、在字符串中截取</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var s &#x3D; [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];</span><br><span class="line">var t &#x3D; s.slice(2,3);</span><br></pre></td></tr></table></figure>
-
-<p>slice返回结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&quot;3&quot;]</span><br></pre></td></tr></table></figure>
-
-<p>slice(2,3)参数是从数组下标为2读取到下标为3，其中‘包前不包后’，就是读取出下标为2的元素，但不读取下标为3的元素</p>
+<pre><code>var s = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];
+var t = s.slice(2,3);</code></pre><p>slice返回结果</p>
+<pre><code>[&quot;3&quot;]</code></pre><p>slice(2,3)参数是从数组下标为2读取到下标为3，其中‘包前不包后’，就是读取出下标为2的元素，但不读取下标为3的元素</p>
 <p>slice一个参数表示，从当前下标读取到最后，如<code>slice(2)</code></p>
 <p><font color="#2ab2ab">字符串和数组类似，可以直接参考上方代码</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 代码参考上方</span><br></pre></td></tr></table></figure>
-
-<p><font color="#2ab2ab">slice参数为负值时</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var s &#x3D; [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];</span><br><span class="line">var t &#x3D; s.slice(-2,-1);</span><br></pre></td></tr></table></figure>
-
-<p>slice返回结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&quot;4&quot;]</span><br></pre></td></tr></table></figure>
-
-<p>我们可以这么理解slice(-2,-1),符号相当于反方向，意思就是从数组或者字符串反方向读取，即: 从下标为1读取到下标为2，规则遵循‘包前不包后’，这里的前后是反方向中的前后</p>
-<h2 id="SUBSTRING"><a href="#SUBSTRING" class="headerlink" title="SUBSTRING"></a>SUBSTRING</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.substring(from, to)</span><br></pre></td></tr></table></figure>
-
-<p>substring() 方法用于提取字符串中介于两个指定下标之间的字符</p>
+<pre><code>// 代码参考上方</code></pre><p><font color="#2ab2ab">slice参数为负值时</font></p>
+<pre><code>var s = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];
+var t = s.slice(-2,-1);</code></pre><p>slice返回结果</p>
+<pre><code>[&quot;4&quot;]</code></pre><p>我们可以这么理解slice(-2,-1),符号相当于反方向，意思就是从数组或者字符串反方向读取，即: 从下标为1读取到下标为2，规则遵循‘包前不包后’，这里的前后是反方向中的前后</p>
+<h2 id="SUBSTRING"><a href="#SUBSTRING" class="headerlink" title="SUBSTRING"></a>SUBSTRING</h2><pre><code>string.substring(from, to)</code></pre><p>substring() 方法用于提取字符串中介于两个指定下标之间的字符</p>
 <p>且依然遵循‘包前不包后’</p>
 <p>如果只包含一个参数，依然是截取到最后</p>
 <h2 id="SUBSTR"><a href="#SUBSTR" class="headerlink" title="SUBSTR"></a>SUBSTR</h2><p>substr() 抽取指定数目的字符</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var s &#x3D; &quot;123 456&quot;;</span><br><span class="line">var t &#x3D; s.substr(2,5);</span><br></pre></td></tr></table></figure>
-
-<p>substr返回结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 456</span><br></pre></td></tr></table></figure>
-
-<p>substr(2,5) 可以理解为从下标2开始（包含下标为2的字符）提取字符5个字符</p>
+<pre><code>var s = &quot;123 456&quot;;
+var t = s.substr(2,5);</code></pre><p>substr返回结果</p>
+<pre><code>3 456</code></pre><p>substr(2,5) 可以理解为从下标2开始（包含下标为2的字符）提取字符5个字符</p>
 <p>如果substr只包含一个参数，依然是提取到最后</p>
 <h2 id="TOSTRING"><a href="#TOSTRING" class="headerlink" title="TOSTRING"></a>TOSTRING</h2><p>toString() 将Date 对象转换为字符串</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var s &#x3D; new Date();</span><br><span class="line">console.log(s,typeof s);</span><br><span class="line">var t &#x3D; s.toString();</span><br><span class="line">console.log(t,typeof t);</span><br></pre></td></tr></table></figure>
-
-<p>console.log() 打印结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Sat Feb 15 2020 11:38:26 GMT+0800 (中国标准时间) &quot;object&quot;</span><br><span class="line">Sat Feb 15 2020 11:38:36 GMT+0800 (中国标准时间) string</span><br></pre></td></tr></table></figure>
-
-
-
-<p>本文部分内容引用于<font color="#2ab2ab"><strong>菜鸟教程</strong></font></p>
+<pre><code>var s = new Date();
+console.log(s,typeof s);
+var t = s.toString();
+console.log(t,typeof t);</code></pre><p>console.log() 打印结果</p>
+<pre><code>Sat Feb 15 2020 11:38:26 GMT+0800 (中国标准时间) &quot;object&quot;
+Sat Feb 15 2020 11:38:36 GMT+0800 (中国标准时间) string</code></pre><p>本文部分内容引用于<font color="#2ab2ab"><strong>菜鸟教程</strong></font></p>
 
             <hr>
           </div>
@@ -418,7 +387,7 @@
   <script src="/lib/prettify/prettify.min.js"></script>
   <script>
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
+      $('pre').addClass('prettyprint  ');
       prettyPrint();
     })
   </script>

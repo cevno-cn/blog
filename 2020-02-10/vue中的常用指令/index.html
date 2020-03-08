@@ -156,38 +156,48 @@
           <div class="markdown-body">
             <h1 id="VUE中的常用指令"><a href="#VUE中的常用指令" class="headerlink" title="VUE中的常用指令"></a>VUE中的常用指令</h1><h4 id="整理基本的常用指令"><a href="#整理基本的常用指令" class="headerlink" title="整理基本的常用指令"></a>整理基本的常用指令</h4><p><code>v-text</code> <code>v-html</code> <code>v-on</code> <code>v-show</code> <code>v-if</code> <code>v-bind</code> <code>v-for</code> <code>v-model</code></p>
 <h4 id="vue中的常用指令在代码中使用"><a href="#vue中的常用指令在代码中使用" class="headerlink" title="vue中的常用指令在代码中使用"></a>vue中的常用指令在代码中使用</h4><p>js代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">		el:<span class="string">"#app"</span>,</span><br><span class="line">		data:&#123;</span><br><span class="line">			message:<span class="string">"&lt;b&gt;加粗字体&lt;b&gt;"</span>,</span><br><span class="line">			arr:[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">		&#125;,</span><br><span class="line">		methods:&#123;</span><br><span class="line">			fun:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">				alert(<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="v-text"><a href="#v-text" class="headerlink" title="v-text"></a>v-text</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-text</span>=<span class="string">"message"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a>v-html</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-html</span>=<span class="string">"message"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="js">&lt;script&gt;
+    var app = new Vue({
+        el:&quot;#app&quot;,
+        data:{
+            message:&quot;&lt;b&gt;加粗字体&lt;b&gt;&quot;,
+            arr:[0,1,2,3]
+        },
+        methods:{
+            fun:function(){
+                alert(1);
+            }
+        }
+    })
+&lt;/script&gt;</code></pre>
+<h5 id="v-text"><a href="#v-text" class="headerlink" title="v-text"></a>v-text</h5><pre><code class="html">&lt;div id=&quot;app&quot;&gt;
+ &lt;span v-text=&quot;message&quot;&gt;&lt;span&gt;
+&lt;/div&gt;</code></pre>
+<h5 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a>v-html</h5><pre><code class="html">&lt;div id=&quot;app&quot;&gt;
+ &lt;span v-html=&quot;message&quot;&gt;&lt;span&gt;
+&lt;/div&gt;</code></pre>
 <p><code>v-text</code> <code>v-html</code> 的区别在于<code>v-html</code> 指令可以解析出标签，而<code>v-text</code> 不能解析标签，会原封不动的将&lt;b&gt;加粗字体&lt;/b&gt;打印出来。</p>
-<h5 id="v-on-绑定的是一些事件，如-click、dblclick"><a href="#v-on-绑定的是一些事件，如-click、dblclick" class="headerlink" title="v-on / @ 绑定的是一些事件，如: click、dblclick"></a>v-on / @ 绑定的是一些事件，如: click、dblclick</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-on:click</span>=<span class="string">"fun"</span>&gt;</span>点击<span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> @<span class="attr">:click</span>=<span class="string">"fun"</span>&gt;</span>点击<span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-show</span>=<span class="string">"true"</span>&gt;</span>内容<span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-if</span>=<span class="string">"true"</span>&gt;</span>内容<span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<h5 id="v-on-绑定的是一些事件，如-click、dblclick"><a href="#v-on-绑定的是一些事件，如-click、dblclick" class="headerlink" title="v-on / @ 绑定的是一些事件，如: click、dblclick"></a>v-on / @ 绑定的是一些事件，如: click、dblclick</h5><pre><code class="html">&lt;div id=&quot;app&quot;&gt;
+ &lt;span v-on:click=&quot;fun&quot;&gt;点击&lt;span&gt;
+ &lt;span @:click=&quot;fun&quot;&gt;点击&lt;span&gt;
+&lt;/div&gt;</code></pre>
+<h5 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h5><pre><code class="html">&lt;div id=&quot;app&quot;&gt;
+ &lt;span v-show=&quot;true&quot;&gt;内容&lt;span&gt;
+&lt;/div&gt;</code></pre>
+<h5 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h5><pre><code class="html">&lt;div id=&quot;app&quot;&gt;
+ &lt;span v-if=&quot;true&quot;&gt;内容&lt;span&gt;
+&lt;/div&gt;</code></pre>
 <p><code>v-show</code> <code>v-if</code> 的区别在于 <code>v-show</code> 指令只是利用display样式对元素显示隐藏，而 <code>v-if</code> 是在DOM树内添加或者删除元素</p>
-<h5 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:src</span>=<span class="string">"/路径"</span>&gt;</span>a标签<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">a</span> <span class="attr">:src</span>=<span class="string">"/路径"</span>&gt;</span>a标签<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-for</span>=<span class="string">"a in arr"</span>&gt;</span>&#123;&#123;a&#125;&#125;<span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="v-model双向数据绑定"><a href="#v-model双向数据绑定" class="headerlink" title="v-model双向数据绑定"></a>v-model双向数据绑定</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"message"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<h5 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h5><pre><code class="html">&lt;div id=&quot;app&quot;&gt;
+ &lt;a v-bind:src=&quot;/路径&quot;&gt;a标签&lt;/a&gt;
+ &lt;a :src=&quot;/路径&quot;&gt;a标签&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<h5 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h5><pre><code class="html">&lt;div id=&quot;app&quot;&gt;
+ &lt;span v-for=&quot;a in arr&quot;&gt;{{a}}&lt;span&gt;
+&lt;/div&gt;</code></pre>
+<h5 id="v-model双向数据绑定"><a href="#v-model双向数据绑定" class="headerlink" title="v-model双向数据绑定"></a>v-model双向数据绑定</h5><pre><code class="html">&lt;div id=&quot;app&quot;&gt;
+ &lt;input v-model=&quot;message&quot; /&gt;
+&lt;/div&gt;</code></pre>
 
             <hr>
           </div>
@@ -373,7 +383,7 @@
   <script src="/lib/prettify/prettify.min.js"></script>
   <script>
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
+      $('pre').addClass('prettyprint  ');
       prettyPrint();
     })
   </script>

@@ -145,6 +145,12 @@
   <div class="row mx-auto index-card">
     
     
+      <div class="col-12 col-md-4 m-auto">
+        <a href="/2020-01-17/onsubmit/" target="_self">
+          <img src="http://photo.ganto.xyz/21.jpg" srcset="/img/loading.gif" alt="解决表单点击回车（enter）键自动刷新无法提交的问题" class="index-img img-fluid rounded index-thumbnails">
+        </a>
+      </div>
+    
     <div class="col-12 col-md-8 mx-auto index-info">
       <a href="/2020-01-17/onsubmit/">
         <p class="h4 index-header">解决表单点击回车（enter）键自动刷新无法提交的问题</p>
@@ -157,7 +163,16 @@
         
         <div class="index-excerpt">
           <div class="index-text mb-1">问题还原在我们写form表单使用回车（enter）键进行提交输入框内的数据时，会发现页面会自动刷新一下，刷新之后输入框内的内容也会清空，并不是直接提交，这样就导致了无法使用回车键提交form表单的死循环问题。
-12345678910111213141516171819202122232425262728293031323334&lt;!DOCTYPE html&gt;&lt;html&gt;	&lt;head&gt;		&lt;meta charset="utf-8" /&gt;		&lt;title&gt;test&lt;/title&gt;	&lt;/head&gt;	&lt;body&gt;		&lt;script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;		&lt;script type="text/javascript"&gt;			$(function()&#123;				// 点击button</div>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;title&gt;test&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src=&quot;https://cdn.bootcss.com/jquery/3.4.1/jquery.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+   </div>
         </div>
       </a>
 
@@ -179,6 +194,12 @@
   <div class="row mx-auto index-card">
     
     
+      <div class="col-12 col-md-4 m-auto">
+        <a href="/2020-01-15/advance/" target="_self">
+          <img src="http://photo.ganto.xyz/68.jpg" srcset="/img/loading.gif" alt="图片预加载" class="index-img img-fluid rounded index-thumbnails">
+        </a>
+      </div>
+    
     <div class="col-12 col-md-8 mx-auto index-info">
       <a href="/2020-01-15/advance/">
         <p class="h4 index-header">图片预加载</p>
@@ -192,9 +213,20 @@
         <div class="index-excerpt">
           <div class="index-text mb-1">图片预加载可以预先加载好网页所需的图片，在网页需要某一张图片时，无需再从服务器请求图片数据，直接从缓存文件中获取所需的图片。 图片预加载，极大的提升了用户体验！
 完整代码贴在了下面，仅供参考！本文预加载只预加载一张图片，每个人都有各自的需求，可以直接复制此处的代码使用，也可以修改后使用！
-引用jQuery库1&lt;script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"&gt;&lt;/script&gt;
+引用jQuery库&lt;script src=&quot;https://cdn.bootcss.com/jquery/3.4.1/jquery.js&quot;&gt;&lt;/script&gt;
+js代码部分/**
+*预加载图片（多往后加载出来一张图片）
+*/
 
-js代码部分1234567891011121314151617181920212223242526272829303132333435363738394041424344454647/***预加载图片（多往后加载出来一张图片）*///初始化代码var list = [];var a = parseInt(Math.random()*5),    b = parseInt(Math.random()*5);list.push(a, b);// console.log(list.length);var count = 0</div>
+//初始化代码
+var list = [];
+var a = parseInt(Math.random()*5),
+    b = parseInt(Math.random()*5);
+list.push(a, b);
+// console.log(list.length);
+var count = 0;
+var num = parseInt(Math.random()*111);
+// console.log(&quot;click</div>
         </div>
       </a>
 
@@ -219,6 +251,12 @@ js代码部分123456789101112131415161718192021222324252627282930313233343536373
 
   <div class="row mx-auto index-card">
     
+    
+      <div class="col-12 col-md-4 m-auto">
+        <a href="/2020-01-09/pdf-js/" target="_self">
+          <img src="http://photo.ganto.xyz/191.jpg" srcset="/img/loading.gif" alt="初识pdf.js - 强大的pdf预览工具" class="index-img img-fluid rounded index-thumbnails">
+        </a>
+      </div>
     
     <div class="col-12 col-md-8 mx-auto index-info">
       <a href="/2020-01-09/pdf-js/">
@@ -281,17 +319,13 @@ js代码部分123456789101112131415161718192021222324252627282930313233343536373
         
         <div class="index-excerpt">
           <div class="index-text mb-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-
+Quick StartCreate a new post$ hexo new &quot;My New Post&quot;
 More info: Writing
-Run server1$ hexo server
-
+Run server$ hexo server
 More info: Server
-Generate static files1$ hexo generate
-
+Generate static files$ hexo generate
 More info: Generating
-Deploy to remote sites1$ hexo deploy
-
+Deploy to remote sites$ hexo deploy
 More info: Deployment
 </div>
         </div>
@@ -435,7 +469,7 @@ More info: Deployment
   <script src="/lib/prettify/prettify.min.js"></script>
   <script>
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
+      $('pre').addClass('prettyprint  ');
       prettyPrint();
     })
   </script>

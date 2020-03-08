@@ -155,13 +155,9 @@
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
             <p>使用npm安装适用于百度的自动生成sitemap.xml文件的插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap --save &#x2F;&#x2F;安装适用于百度的自动生成sitemap.xml文件的插件</span><br></pre></td></tr></table></figure>
-
-<p>在hexo根目录配置文件中添加下列字段(注意缩进)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">baidusitemap:</span><br><span class="line">    path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
-
-
-<p>这样在执行<code>hexo g</code>生成静态文件的时候，会在public目录下生成baidusitemap.xml文件，则表示安装成功</p>
+<pre><code>npm install hexo-generator-baidu-sitemap --save //安装适用于百度的自动生成sitemap.xml文件的插件</code></pre><p>在hexo根目录配置文件中添加下列字段(注意缩进)</p>
+<pre><code>baidusitemap:
+    path: baidusitemap.xml</code></pre><p>这样在执行<code>hexo g</code>生成静态文件的时候，会在public目录下生成baidusitemap.xml文件，则表示安装成功</p>
 <p>sitemap.xml文件的作用就是给百度蜘蛛爬取数据用的</p>
 <p>sitemap.xml文件又被称为“网站地图”</p>
 
@@ -351,7 +347,7 @@
   <script src="/lib/prettify/prettify.min.js"></script>
   <script>
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
+      $('pre').addClass('prettyprint  ');
       prettyPrint();
     })
   </script>
