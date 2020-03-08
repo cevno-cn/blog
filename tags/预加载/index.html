@@ -15,7 +15,7 @@
   <meta name="description" content="Ganto的个人网站">
   <meta name="author" content="Ganto">
   <meta name="keywords" content>
-  <title>我的第一个vue程序 _ Ganto</title>
+  <title>标签 - 预加载 _ Ganto</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
@@ -38,7 +38,7 @@
 
 
 <body>
-  <header style="height: 50vh;">
+  <header style="height: 80vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">&nbsp;<strong>Ganto</strong>&nbsp;</a>
@@ -109,7 +109,7 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background" false style="background: url('')no-repeat center center;
+    <div class="view intro-2" id="background" parallax="true" style="background: url('')no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask rgba-black-light flex-center">
@@ -118,22 +118,6 @@
               
             </span>
 
-            
-              <br>
-              
-                <p class="mt-3">
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
-                  星期一, 2020-02-10, 凌晨 12:00
-                </p>
-              
-
-              <p>
-                
-
-                
-
-                
-              </p>
             
           </div>
 
@@ -145,111 +129,36 @@
 
   <main>
     
+      <div class="container nopadding-md">
+        <div class="py-5 z-depth-3" id="board">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<div class="list-group">
+<!--  <p class="h4">共计 1 篇文章</p>-->
+  <hr>
+  
+    
       
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="py-5 z-depth-3" id="board">
-        <div class="post-content mx-auto" id="post">
-          <div class="markdown-body">
-            <h1 id="我的第一个VUE程序"><a href="#我的第一个VUE程序" class="headerlink" title="我的第一个VUE程序"></a>我的第一个VUE程序</h1><p>此文章只是记录自己的vue学习情况文档！方便日后自己查询。</p>
-<h2 id="VUE-JS相关资料"><a href="#VUE-JS相关资料" class="headerlink" title="VUE.JS相关资料"></a>VUE.JS相关资料</h2><h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
-<li><p>Vue官方网站中文文档：<a href="https://cn.vuejs.org/" target="_blank" rel="external nofollow noopener noreferrer">vue.js</a></p>
-</li>
-<li><p>部署vue项目：只需在html文件下引用下方代码，就可以直接将vue部署到项目中</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+      <p class="h5">2020</p>
+    
+    <a href="/2020-01-15/advance/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">图片预加载</span>
+      <span style="float: right;">01-15</span>
+    </a>
+  
+</div>
 
 
 
-</li>
-</ul>
-<h2 id="我的第一个VUE程序：HELLO-VUE"><a href="#我的第一个VUE程序：HELLO-VUE" class="headerlink" title="我的第一个VUE程序：HELLO VUE!"></a>我的第一个VUE程序：HELLO VUE!</h2><p>html代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">	&#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>js代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">		el:<span class="string">"#app"</span>,</span><br><span class="line">		data:&#123;</span><br><span class="line">			message:<span class="string">"Hello Vue!"</span></span><br><span class="line">		&#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>​    <font color="red"><strong>注意：</strong></font>编写的vue项目中的js代码，至少要放到body下的最后一个结束标签后面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">		&#123;&#123;message&#125;&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    	var app &#x3D; new Vue(&#123;</span><br><span class="line">    		el:&quot;#app&quot;,</span><br><span class="line">    		data:&#123;</span><br><span class="line">    			message:&quot;Hello Vue!&quot;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>渐进式 JavaScript 框架</p>
-
-            <hr>
-          </div>
-          <br>
-          <div>
-            <p>
-            
-            
-              <span>
-                <i class="iconfont icon-tag"></i>
-                
-                  <a class="hover-with-bg" href="/tags/vue">vue</a>
-                
-              </span>
-            
-            </p>
-            
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="d-none d-lg-block col-lg-2 toc-container">
-      
-  <div id="toc">
-    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
-    <div id="tocbot"></div>
-  </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- custom -->
-
-
-<!-- Comments -->
-<div class="col-lg-7 mx-auto nopadding-md">
-  <div class="container comments mx-auto" id="comments">
-    
-      <br><br>
-      
-      
-  <div id="vcomments" style="width: 100%; margin: 0 auto;"></div>
-  <script defer src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
-
-  <script>
-    var notify = 'false' === true;
-    var verify = 'true' === true;
-    var oldLoad = window.onload;
-    window.onload = function () {
-      new Valine({
-        el: '#vcomments',
-        notify: notify,
-        verify: verify,
-        app_id: "aepSK01JH6MBBnycMOyG8esk-MdYXbMMI",
-        app_key: "r6fIpym2WjgJ67oqJY4Xb4t0",
-        placeholder: "^_^说说你的看法吧！",
-        avatar: "monsterid",
-        meta: ['nick', 'mail', 'link'],
-        pageSize: "10",
-      });
-      oldLoad && oldLoad();
-    };
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="external nofollow noopener noreferrer">comments
-      powered by Valine.</a></noscript>
-
-
-    
-  </div>
-</div>
-
     
   </main>
 
@@ -318,11 +227,6 @@
 
 
 
-  
-    <script src="/lib/tocbot/tocbot.min.js"></script>
-  
-  <script src="/js/post.js"></script>
-
 
 
   <script src="/lib/smoothscroll/SmoothScroll.min.js"></script>
@@ -374,7 +278,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "我的第一个vue程序&nbsp;",
+        "标签 - 预加载&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

@@ -15,7 +15,7 @@
   <meta name="description" content="Ganto的个人网站">
   <meta name="author" content="Ganto">
   <meta name="keywords" content>
-  <title>归档 _ Ganto</title>
+  <title>Ganto</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
@@ -38,7 +38,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 100vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">&nbsp;<strong>Ganto</strong>&nbsp;</a>
@@ -122,6 +122,10 @@
           </div>
 
           
+            <div class="scroll-down-bar">
+              <i class="fas fa-angle-down scroll-down-arrow"></i>
+            </div>
+          
         </div>
       </div>
     </div>
@@ -137,26 +141,62 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 16 篇文章</p>
-  <hr>
-  
+
+  <div class="row mx-auto index-card">
     
-      
-      <p class="h5">2000</p>
     
-    <a href="/2000-06-15/hexo-clean-hexo-g-hexo-d/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span>
-      <span style="float: right;">06-15</span>
-    </a>
-  
-    
-    <a href="/2000-06-15/hello-world/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Hello World</span>
-      <span style="float: right;">06-15</span>
-    </a>
-  
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a href="/2000-06-15/hello-world/">
+        <p class="h4 index-header">Hello World</p>
+      </a>
+
+      <a href="/2000-06-15/hello-world/">
+        
+        
+          
+        
+        <div class="index-excerpt">
+          <div class="index-text mb-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new "My New Post"
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Generate static files1$ hexo generate
+
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
 </div>
+        </div>
+      </a>
+
+      <div class="index-btm">
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2000-06-15&nbsp;&nbsp;
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <nav aria-label="index posts navigation">
+    <span class="pagination pg-blue justify-content-center mt-5" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-angle-double-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByClassName("page-number")) {
+      ele.href += '#board';
+    }
+  </script>
+
 
 
               </div>
@@ -283,7 +323,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "归档&nbsp;",
+        "你好！欢迎访问我的博客！&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
