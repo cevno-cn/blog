@@ -347,6 +347,10 @@ a.police-beian img {
 .time_ {
   margin-top: 10px;
 }
+.scroll-down-bar {
+  display: flex;
+  justify-content: center;
+}
 @-moz-keyframes scroll-down {
   0% {
     opacity: 0.8;
