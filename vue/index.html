@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vue音乐_Ganto</title>
+        <title>Vue音乐实例 _ Ganto</title>
         <link rel="stylesheet" href="css/index.css">
         <link rel="shortcut icon" type="text/css" href="http://ganto.xyz/images/favicon.ico">
     <meta name="generator" content="Hexo 4.2.0"></head>
@@ -11,12 +11,12 @@
         <div id="box">
             <div id="app">
                 <div class="header">
-                    <span>G</span>
+                    <span class="ntm" title="点击还原默认">还原</span>
                     <div class="search">
                         <input type="text" placeholder="请输入歌手名字" class="text" v-model="city" @keyup.enter="getjoke">
                         <input type="button" class="button" value="搜索" @click="getjoke">
                     </div>
-                    <span>Vue_Ganto</span>
+                    <span class="tm" title="点击透明，欣赏音乐与图片的双重快感">透明</span>
                 </div>
                 <ul>
                     <li class="li" :title="a.name + '-' + a.artists[0].name" v-for="(a,index) in arr" @click="fun(a.id,a.name,a.artists[0].name)">{{a.name}}-{{a.artists[0].name}}</li>
@@ -40,9 +40,10 @@
         <script src="js/index.js"></script>
         <script>
             $(function(){
-                $("#app").hover(function(){
+                $(".ntm").click(function(){
                     $("#app").stop().animate({opacity:1});
-                },function(){
+                })
+                $(".tm").click(function(){
                     $("#app").stop().animate({opacity:0.2});
                 });
             })

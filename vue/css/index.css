@@ -98,6 +98,9 @@ ul{
     position: relative;
     z-index: 9999;
 }
+ul::-webkit-scrollbar{
+    display: none;
+}
 ul li{
     height: 17px;
     cursor: pointer;
@@ -164,6 +167,9 @@ li:nth-of-type(even) {
     color: wheat;
     overflow-y: auto;
     margin: 15px;
+}
+.section .lyric::-webkit-scrollbar{
+    display: none;
 }
 .section .lyric span{
     display: block;
