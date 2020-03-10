@@ -11,12 +11,12 @@
         <div id="box">
             <div id="app">
                 <div class="header">
-                    <span class="ntm" title="点击还原默认">还原</span>
+                    <span class="ntm">Music</span>
                     <div class="search">
                         <input type="text" placeholder="请输入歌手名字" class="text" v-model="city" @keyup.enter="getjoke">
                         <input type="button" class="button" value="搜索" @click="getjoke">
                     </div>
-                    <span class="tm" title="点击透明，欣赏音乐与图片的双重快感">透明</span>
+                    <span class="tm" title="点击隐藏"><i>右上角展开</i>×</span>
                 </div>
                 <ul>
                     <li class="li" :title="a.name + '-' + a.artists[0].name" v-for="(a,index) in arr" @click="fun(a.id,a.name,a.artists[0].name)">{{a.name}}-{{a.artists[0].name}}</li>
@@ -32,6 +32,7 @@
                 </div>
                 <audio autoplay controls loop :src="url"></audio>
             </div>
+            <span class="kai" title="展开">√</span>
         </div>
         <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -40,11 +41,20 @@
         <script src="js/index.js"></script>
         <script>
             $(function(){
-                $(".ntm").click(function(){
-                    $("#app").stop().animate({opacity:1});
-                })
+                $(".kai").hide();
+                $(".tm i").hide();
                 $(".tm").click(function(){
-                    $("#app").stop().animate({opacity:0.2});
+                    $("#app").slideUp(100);
+                    $(".kai").fadeIn();
+                });
+                $(".tm").hover(function(){
+                    $(".tm i").stop().slideDown();
+                },function(){
+                    $(".tm i").stop().slideUp();
+                })
+                $(".kai").click(function(){
+                    $("#app").slideDown(100);
+                    $(".kai").fadeOut();
                 });
             })
         </script>
