@@ -270,18 +270,16 @@ var num = parseInt(Math.random()*111);
         
         <div class="index-excerpt">
           <div class="index-text mb-1">pdf.js官网链接在此
-超详细步骤
-第一步首先就是访问pdf.js官网
-
+超详细步骤第一步首先就是访问pdf.js官网
 第二步点击官网中的“Download“按钮，将文件下载到本地
-
 第三步将从pdf.js官网下载下来的zip文件解压出来
-
 第四步将解压出来的文件全部拷贝到你的整个项目中。我是新建了一个pdf.js文件夹，将解压出来的文件全部放到了这个文件夹里面
-
 第五步首先进入web文件夹下打开viewer.js，找到value: ‘XXXXXX-09.pdf’, 这个就是默认的pdf的demo文件，可以直接删除value的值，这样就确保我们可以打开多个pdf文件，删除后保存
-
-第六步配置自己项目这里我们用a标签为例，大家可以看到href的内容，前面“../pdf.js/web/viewer.html”是web-&gt;locale-&gt;viewer.html这个html文件的路径，然后?file= 后面的“http://ganto.top/study/Advanced mathematics/_0.pdf”就是自己项目中的pdf文件的路径。理解这样写并不难，大家打开web-&gt;locale路径下的这个-&gt;vie</div>
+defaultZoomValue: {
+    value: &#39;&#39;,
+},
+第六步&lt;a href=&quot;../pdf.js/web/viewer.html?file=http://ganto.xyz/study/Advanced mathematics/_0.pdf&quot;&gt;高数预备知识作业_0&lt;/a&gt;
+配置自己项目这里我们用a标签为例，大家可以看到href的内容，前面“../pdf.js/web/viewer.h</div>
         </div>
       </a>
 

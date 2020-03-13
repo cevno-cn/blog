@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ganto.xyz/2020-01-09/pdf-js/</loc>
+    
+    <lastmod>2020-03-13T05:27:18.507Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ganto.xyz/2020-02-26/sitemap/</loc>
     
     <lastmod>2020-03-08T16:17:53.726Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://ganto.xyz/2020-02-11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/</loc>
     
     <lastmod>2020-03-08T16:13:50.060Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ganto.xyz/2020-01-09/pdf-js/</loc>
-    
-    <lastmod>2020-03-08T16:13:38.709Z</lastmod>
     
   </url>
   
