@@ -56,6 +56,22 @@
                     $("#app").slideDown(100);
                     $(".kai").fadeOut();
                 });
+                var app = $("#app"),
+                    header = $(".header");
+                var disX,
+                    disY;
+                header.mousedown(function(e){
+                    disX = e.pageX - parseInt(app.offset().left);
+                    disY = e.pageY - parseInt(app.offset().top);
+                    document.onmousemove = function(e){
+                        var event = e || window.event;
+                        app.css({"left":e.pageX - disX + "px", "top":e.pageY - disY + "px"});
+                    }
+                    document.onmouseup = function(){
+                        document.onmousemove = null;
+                    }
+                    
+                })
             })
         </script>
     </body>
