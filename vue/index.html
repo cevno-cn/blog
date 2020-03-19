@@ -11,7 +11,7 @@
         <div id="box">
             <div id="app">
                 <div class="header">
-                    <span class="ntm">Music</span>
+                    <span class="ntm"><a style="color: white;text-decoration: none;" href="#">Music</a></span>
                     <div class="search">
                         <input type="text" placeholder="请输入歌手名字" class="text" v-model="city" @keyup.enter="getjoke">
                         <input type="button" class="button" value="搜索" @click="getjoke">
@@ -33,6 +33,7 @@
                 <audio autoplay controls loop :src="url"></audio>
             </div>
             <span class="kai" title="展开">√</span>
+            <span class="github" title="右键关闭"><a style="color: #2ab;text-decoration: none;" href="http://ganto.xyz/vue/musicVueDemoByGanto.zip">GitHub源码</a></span>
         </div>
         <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -71,6 +72,11 @@
                         document.onmousemove = null;
                     }
                     
+                })
+                $(".github").mousedown(function(e){
+                    if(e.button == 2){
+                        $(this).fadeOut();
+                    }
                 })
             })
         </script>

@@ -215,3 +215,8 @@ li:nth-of-type(even) {
     text-align: center;
     line-height: 20px;
 }
+.github{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
