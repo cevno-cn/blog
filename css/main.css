@@ -338,13 +338,12 @@ a.police-beian img {
 }
 ::-webkit-scrollbar {
   width: 8px;
-  background: #fff;
 }
 ::-webkit-scrollbar {
   height: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #2ab2ab;
+  background: #aaa;
 }
 .time_ {
   margin-top: 10px;
