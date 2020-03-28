@@ -158,7 +158,7 @@
 <p>我们是利用<code>git</code>进行对hexo项目操作的，包括把文章部署到码云/github。</p>
 <p>所以首先要安装<code>node.js</code>、<code>git</code></p>
 <h2 id="第二步：安装并生成hexo默认文件"><a href="#第二步：安装并生成hexo默认文件" class="headerlink" title="第二步：安装并生成hexo默认文件"></a>第二步：安装并生成hexo默认文件</h2><h4 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1. 安装hexo"></a>1. 安装hexo</h4><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p>
-<p>首先创建一个文件夹为blog，我们右键使用Git Bash Here打开。</p>
+<p>首先创建一个文件夹为“blog”来存放我们的博客文件，我们右键使用Git Bash Here打开。</p>
 <p>直接运行下方代码，使用 npm进行安装hexo</p>
 <pre><code>$ npm install hexo-cli -g</code></pre><p>安装结束后，我们通过以下命令查看版本</p>
 <pre><code>$ hexo version</code></pre><p>如果出现一下文字，则证明安装hexo成功，这里打印出了各种依赖环境的版本号</p>
@@ -182,20 +182,19 @@ tz: 2019c
 unicode: 12.1</code></pre><h4 id="2-新建所需的文件"><a href="#2-新建所需的文件" class="headerlink" title="2. 新建所需的文件"></a>2. 新建所需的文件</h4><p>安装 Hexo 完成后，执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件</p>
 <pre><code>$ hexo init myblog // 新建所需要的文件
 $ cd myblog // 进入myblog
-$ npm install // 同步配置文件</code></pre><p><strong>注意</strong>：在使用<code>$ npm init</code>命令的时候有概率会出现配置环境的问题</p>
+$ npm install // 同步配置文件</code></pre><p><strong>注意</strong>：在使用<code>$ hexo init</code>命令的时候有概率会出现配置环境的问题，如果没保存就直接往下运行即可</p>
 <p>启动hexo</p>
 <pre><code>$ hexo server</code></pre><p>然后我们就可以使用 localhost:4000 访问了！</p>
-<h2 id="部署到码云-github"><a href="#部署到码云-github" class="headerlink" title="部署到码云/github"></a>部署到码云/github</h2><h4 id="码云准备工作"><a href="#码云准备工作" class="headerlink" title="码云准备工作"></a>码云准备工作</h4><p>首先我们需要有一个码云账户</p>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><h4 id="github准备工作"><a href="#github准备工作" class="headerlink" title="github准备工作"></a>github准备工作</h4><p>首先我们需要有一个github账户，自己去注册一个就可以</p>
 <p>然后创建一个仓库</p>
-<p>创建仓库的时候一定要选择 <strong><em>使用Readme文件初始化这个仓库</em></strong></p>
-<p>然后进入仓库点击<strong>克隆/下载</strong>，复制<strong>https</strong>地址，如：<a href="https://gitee.com/XXX/XXX.git" target="_blank" rel="external nofollow noopener noreferrer">https://gitee.com/XXX/XXX.git</a></p>
-<h4 id="部署github"><a href="#部署github" class="headerlink" title="部署github"></a>部署github</h4><p>部署到github和部署到码云上一样，这里就不多叙述</p>
+<p>创建仓库的时候勾上 <strong><em>Initialize this repository with a README</em></strong></p>
+<p>然后进入仓库点击，绿色处<strong>Clone or download</strong>，复制<strong>https</strong>地址，如：<a href="https://github.com/xxxx/xx.git" target="_blank" rel="external nofollow noopener noreferrer">https://github.com/xxxx/xx.git</a></p>
 <h4 id="配置-config-yml文件"><a href="#配置-config-yml文件" class="headerlink" title="配置_config.yml文件"></a>配置_config.yml文件</h4><p>打开配置文件，拉到最后，找到<strong>deploy</strong>，这样配置</p>
 <pre><code># Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://gitee.com/XXX/XXX.git
+  repo: https://github.com/xxxx/xx.git
   branch: master</code></pre><p>如果要同时部署到码云/github，可以这样配置</p>
 <pre><code># Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -204,19 +203,21 @@ deploy:
   repo: 
     coding: https://gitee.com/xxx/xxx.git,master
     duapp: https://github.com/xxx/xxx.github.io.git,master</code></pre><p>一点要注意规范，<code>type:</code> <code>repo:</code> <code>branch:</code>后一定要空一格</p>
-<p>然后我们要注意配置文件中的<strong>root:</strong></p>
-<p>默认是<strong>root: /</strong>，我们要修改成<strong>root: <a href="https://ganto_blog.gitee.io/blog/" target="_blank" rel="external nofollow noopener noreferrer">https://ganto_blog.gitee.io/blog/</a></strong>或者<strong>root: /blog/</strong></p>
-<h4 id="提交代码到码云-github仓库"><a href="#提交代码到码云-github仓库" class="headerlink" title="提交代码到码云/github仓库"></a>提交代码到码云/github仓库</h4><p>首先安装 hexo-deployer-git，这是一个插件包，用于提交代码到<strong>码云</strong> / <strong>github</strong></p>
+<h4 id="提交代码到github仓库"><a href="#提交代码到github仓库" class="headerlink" title="提交代码到github仓库"></a>提交代码到github仓库</h4><p>首先安装 hexo-deployer-git，这是一个插件包，用于提交代码到<strong>码云</strong> / <strong>github</strong></p>
 <pre><code>$ npm install hexo-deployer-git --save</code></pre><p>执行成功后，会在文件夹中多出一个<strong>.deploy_git</strong>文件夹</p>
-<p>然后执行下面代码提交你的邮箱和用户名（这里指的是你的码云邮箱、用户名或者GitHub邮箱、用户名）</p>
+<p>然后执行下面代码提交你的邮箱和用户名（这里指的是你的GitHub邮箱、用户名）</p>
 <pre><code>git config --global user.email “你的邮箱”
 git config --global user.name “用户名”</code></pre><p>接着执行以下命令将代码推送上去</p>
 <pre><code>$ hexo clean
 $ hexo g
-$ hexo d</code></pre><p>这时会弹出账号密码框，这里的账号密码是码云的账号密码，注意别把名字当成账号，账号一般都是手机号或者邮箱地址</p>
-<p>成功提交代码后，我们会在码云/GitHub仓库看到我们提交的代码</p>
+$ hexo d</code></pre><p>也可以这样执行命令</p>
+<pre><code>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre><p>这时会弹出账号/密码框，账号和密码，就是GitHub登录的账号和密码</p>
+<p>成功提交代码后，我们会在GitHub仓库看到我们提交的代码</p>
+<h2 id="上传到码云仓库"><a href="#上传到码云仓库" class="headerlink" title="上传到码云仓库"></a>上传到码云仓库</h2><p>上传到码云仓库和GitHub仓库，基本一样，可以按照上方操作进行</p>
+<p>要注意配置文件中的root:<br>默认是root: /，可能要修改成root: <a href="https://ganto_blog.gitee.io/xxx/或者root" target="_blank" rel="external nofollow noopener noreferrer">https://ganto_blog.gitee.io/xxx/或者root</a>: /xxx/</p>
+<p>因为码云仓库，创建之后，会在一个类似文件夹中，所以配置文件这里需要修改为root: /xxx/</p>
 <h2 id="搭建后出现的一系列问题"><a href="#搭建后出现的一系列问题" class="headerlink" title="搭建后出现的一系列问题"></a>搭建后出现的一系列问题</h2><ol>
-<li><p>码云Gitee Pages 普通版，每次提交代码后，都需要手动更新 Pages 服务（重启 Pages 服务），可以免费使用一个月pro版，坑</p>
+<li><p>如果你是上传到码云仓库，码云Gitee Pages 普通版，每次提交代码后，都需要手动更新 Pages 服务（重启 Pages 服务），可以免费使用一个月pro版，坑</p>
 </li>
 <li><p>在博客中有时候加载jQuery包的路径无法访问，我们需要修改jQuery包路径，这个问题好像只有默认landscape主题有,如果真的存在这种问题的话，可以进入themes\landscape\layout_partial，找到after-footer.ejs打开，把引用的包改成其他可以访问的即可，不可以改成http地址包</p>
 </li>
