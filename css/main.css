@@ -374,6 +374,11 @@ a.police-beian img {
 html {
   filter: grayscale(1);
 }
+@media (max-width: 500px) {
+  #bulletin {
+    width: 100%;
+  }
+}
 @-moz-keyframes scroll-down {
   0% {
     opacity: 0.8;
