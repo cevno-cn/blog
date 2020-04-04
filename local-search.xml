@@ -156,6 +156,25 @@
   
   
   <entry>
+    <title>vue练习实例</title>
+    <link href="/2020-02-11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/"/>
+    <url>/2020-02-11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/</url>
+    
+    <content type="html"><![CDATA[<p>最近在b站学习vue框架，跟着老师用vue写了一个音乐播放器</p><p>实例<a href="http://ganto.xyz/vue">链接</a></p><p>播放器使用了 网易云音乐api 接口</p><p>用vue实现的</p><p>如想了解 <a href="https://autumnfish.cn/" target="_blank" rel="external nofollow noopener noreferrer">网易云音乐 API</a> 可以访问官方文档了解</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vue</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>网易云音乐 API</title>
     <link href="/2020-02-11/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-API/"/>
     <url>/2020-02-11/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-API/</url>
@@ -175,25 +194,6 @@
     <tags>
       
       <tag>api</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>vue练习实例</title>
-    <link href="/2020-02-11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/"/>
-    <url>/2020-02-11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/</url>
-    
-    <content type="html"><![CDATA[<p>最近在b站学习vue框架，跟着老师用vue写了一个音乐播放器</p><p>实例<a href="http://ganto.xyz/vue">链接</a></p><p>播放器使用了 网易云音乐api 接口</p><p>用vue实现的</p><p>如想了解 <a href="https://autumnfish.cn/" target="_blank" rel="external nofollow noopener noreferrer">网易云音乐 API</a> 可以访问官方文档了解</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vue</tag>
       
     </tags>
     
