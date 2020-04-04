@@ -223,3 +223,7 @@ setInterval(function(){
   $(".run_ span").html(zhD + "天" + zhH + "小时" + zhM + "分钟" + zhS + "秒钟");
   
 },1000);
+
+document.getElementById("bulletin_0").onclick = function(){
+  document.getElementById("bulletin").style.display = "none";
+}
