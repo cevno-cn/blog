@@ -224,6 +224,7 @@ setInterval(function(){
   
 },1000);
 
-document.getElementById("bulletin_0").onclick = function(){
-  document.getElementById("bulletin").style.display = "none";
-}
+// 公告关闭按钮
+// document.getElementById("bulletin_0").onclick = function(){
+//   document.getElementById("bulletin").style.display = "none";
+// }
