@@ -371,9 +371,6 @@ a.police-beian img {
 .link-card:hover>.card-body .img_ {
   transform: scale(1.2);
 }
-html {
-  filter: grayscale(1);
-}
 #bulletin {
   width: 400px;
   height: 90px;
