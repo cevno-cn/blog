@@ -15,7 +15,7 @@
   <meta name="description" content="Ganto的个人网站">
   <meta name="author" content="Ganto">
   <meta name="keywords" content>
-  <title>归档 _ Ganto</title>
+  <title>Ganto</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
@@ -39,7 +39,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 100vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">&nbsp;<strong>Ganto</strong>&nbsp;</a>
@@ -123,6 +123,10 @@
           </div>
 
           
+            <div class="scroll-down-bar">
+              <i class="fas fa-angle-down scroll-down-arrow"></i>
+            </div>
+          
         </div>
       </div>
     </div>
@@ -138,57 +142,48 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 16 篇文章</p>
-  <hr>
-  
+  <div class="row mx-auto index-card">
     
-      
-      <p class="h5">2020</p>
     
-    <a href="/2020-02-11/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-API/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">网易云音乐 API</span>
-      <span style="float: right;">02-11</span>
-    </a>
-  
-    
-    <a href="/2020-02-10/vue%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">vue中的常用指令</span>
-      <span style="float: right;">02-10</span>
-    </a>
-  
-    
-    <a href="/2020-01-17/onsubmit/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">解决表单点击回车（enter）键自动刷新无法提交的问题</span>
-      <span style="float: right;">01-17</span>
-    </a>
-  
-    
-    <a href="/2020-01-15/advance/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">图片预加载</span>
-      <span style="float: right;">01-15</span>
-    </a>
-  
-    
-    <a href="/2020-01-09/pdf-js/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">初识pdf.js - 强大的pdf预览工具</span>
-      <span style="float: right;">01-09</span>
-    </a>
-  
-    
-      
-      <p class="h5">2000</p>
-    
-    <a href="/2000-06-15/hello-world/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Hello World</span>
-      <span style="float: right;">06-15</span>
-    </a>
-  
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a href="/2000-06-15/hello-world/">
+        <p class="h4 index-header">Hello World</p>
+      </a>
+
+      <a href="/2000-06-15/hello-world/">
+        
+        
+          
+        
+        <div class="index-excerpt">
+          <div class="index-text mb-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post$ hexo new &quot;My New Post&quot;
+More info: Writing
+Run server$ hexo server
+More info: Server
+Generate static files$ hexo generate
+More info: Generating
+Deploy to remote sites$ hexo deploy
+More info: Deployment
 </div>
+        </div>
+      </a>
+
+      <div class="index-btm">
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2000-06-15&nbsp;&nbsp;
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
 
   <nav aria-label="index posts navigation">
     <span class="pagination pg-blue justify-content-center mt-5" id="pagination">
-      <a class="extend prev" rel="prev" href="/archives/"><i class="fas fa-angle-double-left"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-angle-double-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
     </span>
   </nav>
   
@@ -197,6 +192,7 @@
       ele.href += '#board';
     }
   </script>
+
 
 
               </div>
@@ -323,7 +319,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "归档&nbsp;",
+        "你好！欢迎访问我的博客&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
