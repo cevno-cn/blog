@@ -144,9 +144,8 @@ $(document).ready(function () {
 //   load();
 // },60000);
 
-$.get("http://v1.alapi.cn/api/bing/?format=json",function(e,status){
-  console.log(e.data.bing);
-  $('#background').css("background-image","url("+e.data.bing+")");
+$.get("https://v1.alapi.cn/api/acg?format=json",function(e,status){
+  $('#background').css("background-image","url("+e.data.url+"!/both/1920x1080)");
 });
 
 
