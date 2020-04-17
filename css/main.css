@@ -401,6 +401,10 @@ a.police-beian img {
     width: 100%;
   }
 }
+::selection {
+  background: #2ab2ab;
+  color: #fff;
+}
 @-moz-keyframes scroll-down {
   0% {
     opacity: 0.8;
