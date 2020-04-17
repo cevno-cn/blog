@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ganto.xyz/2020-03-15/b/</loc>
+    
+    <lastmod>2020-04-17T10:15:40.973Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ganto.xyz/2020-02-11/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-API/</loc>
+    
+    <lastmod>2020-04-17T10:11:23.737Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ganto.xyz/2020-02-10/vue%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</loc>
     
     <lastmod>2020-04-17T05:28:38.056Z</lastmod>
@@ -65,13 +79,6 @@
   </url>
   
   <url>
-    <loc>http://ganto.xyz/2020-03-15/b/</loc>
-    
-    <lastmod>2020-04-17T04:45:07.459Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ganto.xyz/2020-02-11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
     
     <lastmod>2020-04-17T04:45:03.443Z</lastmod>
@@ -89,13 +96,6 @@
     <loc>http://ganto.xyz/2020-02-18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%B2/</loc>
     
     <lastmod>2020-04-17T04:44:57.564Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ganto.xyz/2020-02-11/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-API/</loc>
-    
-    <lastmod>2020-04-17T04:44:53.132Z</lastmod>
     
   </url>
   
