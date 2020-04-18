@@ -110,43 +110,43 @@ $(document).ready(function () {
 //   document.getElementById("background").style.backgroundImage = "url(http://say.ganto.xyz/images/" + num + ".jpg)";
 // },1000);
 
-var img_num = 202; // 图片总数
+// var img_num = 202; // 图片总数
 				
-//预加载图片（多往后加载出来一张图片）
-var list = [];
-var a = parseInt(Math.random()*(img_num+1) ),
-    b = parseInt(Math.random()*(img_num+1));
-list.push(a, b);
-// console.log(list.length);
-var count = 0;
-var num = parseInt(Math.random()*(img_num+1));
+// //预加载图片（多往后加载出来一张图片）
+// var list = [];
+// var a = parseInt(Math.random()*(img_num+1) ),
+//     b = parseInt(Math.random()*(img_num+1));
+// list.push(a, b);
+// // console.log(list.length);
+// var count = 0;
+// var num = parseInt(Math.random()*(img_num+1));
 
-// console.log("click_num/"+num);
-// console.log("click_list/"+list);
-// console.log("click_count"+count+'\n---------------------');
+// // console.log("click_num/"+num);
+// // console.log("click_list/"+list);
+// // console.log("click_count"+count+'\n---------------------');
 
 
-function load() {
-  var imgObj = new Image();
-  imgObj.src = "http://photo.ganto.xyz/"+list[list.length-1]+".jpg";
-}
-$('#background').css("background-image","url(http://photo.ganto.xyz/"+list[count]+".jpg)");
-load();
+// function load() {
+//   var imgObj = new Image();
+//   imgObj.src = "http://photo.ganto.xyz/"+list[list.length-1]+".jpg";
+// }
+// $('#background').css("background-image","url(http://photo.ganto.xyz/"+list[count]+".jpg)");
+// load();
 
-setInterval(function(){
-  num = parseInt(Math.random()*(img_num+1));
-  // console.log("setInterval_num/"+num);
-  list.push(num);
-  // console.log("setInterval_list/"+list);
-  count++;
-  // console.log("setInterval_count"+count+'------------');
-  $('#background').css("background-image","url(http://photo.ganto.xyz/"+list[count]+".jpg)");
-  load();
-},60000);
+// setInterval(function(){
+//   num = parseInt(Math.random()*(img_num+1));
+//   // console.log("setInterval_num/"+num);
+//   list.push(num);
+//   // console.log("setInterval_list/"+list);
+//   count++;
+//   // console.log("setInterval_count"+count+'------------');
+//   $('#background').css("background-image","url(http://photo.ganto.xyz/"+list[count]+".jpg)");
+//   load();
+// },60000);
 
-// $.get("https://v1.alapi.cn/api/acg?format=json",function(e,status){
-//   $('#background').css("background-image","url("+e.data.url+"!/both/1920x1080)");
-// });
+$.get("https://v1.alapi.cn/api/acg?format=json",function(e,status){
+  $('#background').css("background-image","url("+e.data.url+"!/both/1920x1080)");
+});
 
 
 
