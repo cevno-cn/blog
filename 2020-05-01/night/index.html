@@ -15,7 +15,7 @@
   <meta name="description" content="Ganto的个人网站">
   <meta name="author" content="Ganto">
   <meta name="keywords" content>
-  <title>归档 _ Ganto</title>
+  <title>夜间模式 _ Ganto</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
@@ -39,7 +39,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 50vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">&nbsp;<strong>Ganto</strong>&nbsp;</a>
@@ -110,7 +110,7 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background" parallax="true" style="background: url('')no-repeat center center;
+    <div class="view intro-2" id="background" false style="background: url('')no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask rgba-black-light flex-center">
@@ -119,6 +119,22 @@
               
             </span>
 
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期五, 2020-05-1, 下午 5:40
+                </p>
+              
+
+              <p>
+                
+
+                
+
+                
+              </p>
             
           </div>
 
@@ -130,35 +146,211 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 19 篇文章</p>
-  <hr>
-  
-    
       
-      <p class="h5">2020</p>
-    
-    <a href="/2020-03-15/b/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">b站账号被永久封禁？</span>
-      <span style="float: right;">03-15</span>
-    </a>
-  
-</div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <p>最近在逛各个大佬的博客，发现了个很有趣的功能，就是网页中的夜间模式</p>
+<p>并且切换到夜间模式，刷新页面并不会恢复</p>
+<p>然后自己试着实现这个功能</p>
+<p>直接附上代码</p>
+<p>代码写的比较糙，需要的小伙伴自行随意修改</p>
+<link rel="stylesheet" type="text/css" href="/night/index.css">
+<script src="/night/index.js"></script>
+<div id="an" style="cursor: pointer;display: flex;justify-content: center;"><b>测试按钮</b></div>
+<br>
 
-              </div>
-            </div>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;&lt;/title&gt;
+        &lt;style type=&quot;text/css&quot;&gt;
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                transition: all 1s;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            .box{
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+            #an{
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                border-radius: 10px;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src=&quot;https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            // 声明所用到的变量
+            var y = parseInt(getCookie(&quot;night&quot;)),
+                a = document.getElementsByTagName(&quot;a&quot;),
+                j,
+                i,
+                name,
+                ca,
+                c;
+
+            // 返回cookie指定参数的方法
+            function getCookie(cname){
+                name = cname + &quot;=&quot;;
+                ca = document.cookie.split(&#39;;&#39;);
+                for(i=0; i&lt;ca.length; i++) {
+                    c = ca[i].trim();
+                    if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+                }
+                return &quot;&quot;;
+            }
+
+            // 判断cookie值中的night为 0 or 1 ;
+            function panduan(){
+                y = parseInt(getCookie(&quot;night&quot;));
+                if(y == 0){ // 白天模式的样式
+                    document.body.style.backgroundColor = &quot;&quot;;
+                    document.body.style.color = &quot;&quot;;
+                    // $(&quot;#an&quot;).html(&quot;夜间模式&quot;); // 切换按钮 文字 型
+                    $(&quot;#an&quot;).css(&quot;background-image&quot;, &quot;url(img/夜晚.png)&quot;); // 切换按钮 图标 型
+                    for(j = 0; j &lt; a.length; j++){
+                        a[j].style.color = &quot;&quot;
+                    }
+                }else if(y == 1){ // 夜间模式的样式
+                    document.body.style.backgroundColor = &quot;black&quot;;
+                    document.body.style.color = &quot;white&quot;;
+                    // $(&quot;#an&quot;).html(&quot;白天模式&quot;);
+                    $(&quot;#an&quot;).css(&quot;background-image&quot;, &quot;url(img/白天.png)&quot;);
+                    for(j = 0; j &lt; a.length; j++){
+                        a[j].style.color = &quot;white&quot;
+                    }
+                }
+            }
+
+            // 判断night是否存在，设置初始cookie值
+            if(y == 0){
+                panduan();
+            }else if(y == 1){
+                panduan();
+            }else{ // night不存在则执行，初始化night = 0 即 白天模式
+                document.cookie=&quot;night = 0; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/&quot;;
+                panduan();
+            }
+
+            // 刷新页面时直接执行判断方法，从而实现刷新页面
+            panduan();
+            window.onload = function(){
+                panduan(); // 页面资源加载完成后，再次执行判断方法（可删）
+
+                $(&quot;#an&quot;).click(function(){
+                    if(y == 0){
+                        document.cookie=&quot;night = 1; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/&quot;; // 修改 1 / 夜间
+                        panduan();
+                    }else if(y == 1){
+                        document.cookie=&quot;night = 0; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/&quot;; // 修改 0 / 白天
+                        panduan();
+                    }else{
+                        document.cookie=&quot;night = 1; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/&quot;; // 第一次加载，设置默认cookie值
+                        panduan();
+                    }
+                })
+            }
+        &lt;/script&gt;
+
+        &lt;div class=&quot;box&quot;&gt;
+            &lt;div id=&quot;an&quot;&gt;&lt;/div&gt;
+            &lt;div id=&quot;&quot;&gt;
+                &lt;a href=&quot;&quot;&gt;这是a标签&lt;/a&gt;
+                &lt;p&gt;这是p标签&lt;/p&gt;
+                &lt;b&gt;这是b标签&lt;/b&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+            
+            </p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+  <div id="vcomments" style="width: 100%; margin: 0 auto;"></div>
+  <script src="https://unpkg.com/valine@1.4.9/dist/Valine.min.js"></script>
+  <!-- <script defer src="//cdn.jsdelivr.net/npm/valine"></script> -->
+  <!-- <script src="http://ganto.xyz/libs/Valine.min.js"></script> -->
+
+  <script>
+    var notify = 'false' === true;
+    var verify = 'false' === true;
+    var oldLoad = window.onload;
+    window.onload = function () {
+      new Valine({
+        el: '#vcomments',
+        notify: notify,
+        verify: verify,
+        app_id: "aepSK01JH6MBBnycMOyG8esk-MdYXbMMI",
+        app_key: "r6fIpym2WjgJ67oqJY4Xb4t0",
+        placeholder: "^_^说说你的看法吧！",
+        avatar: "monsterid",
+        meta: ['nick', 'mail', 'link'],
+        pageSize: "10",
+      });
+      oldLoad && oldLoad();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="external nofollow noopener noreferrer">comments
+      powered by Valine.</a></noscript>
+
+
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -227,6 +419,11 @@
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js"></script>
+  
+  <script src="/js/post.js"></script>
+
 
 
   <script src="/lib/smoothscroll/SmoothScroll.min.js"></script>
@@ -267,7 +464,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "归档&nbsp;",
+        "夜间模式&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
