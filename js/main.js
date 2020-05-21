@@ -147,9 +147,11 @@ $(document).ready(function () {
 $.get("https://v1.alapi.cn/api/acg?format=json",function(e,status){
   $('#background').css("background-image","url("+e.data.url+"!/both/1920x1080)");
 });
-
-
-
+setInterval(function(){
+  $.get("https://v1.alapi.cn/api/acg?format=json",function(e,status){
+    $('#background').css("background-image","url("+e.data.url+"!/both/1920x1080)");
+  });
+},30000);
 
 // 百度收录
 (function(){
