@@ -333,6 +333,9 @@ a.police-beian img {
 .markdown-body ol {
   padding: 0;
 }
+#background {
+  transition: all 0.1s;
+}
 ::-webkit-scrollbar {
   width: 8px;
 }
