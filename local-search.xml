@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>Java学习</title>
+    <link href="/2020-07-26/JavaLearn/"/>
+    <url>/2020-07-26/JavaLearn/</url>
+    
+    <content type="html"><![CDATA[<h1 id="简单Java类"><a href="#简单Java类" class="headerlink" title="简单Java类"></a>简单Java类</h1><h3 id="第一种开发要求"><a href="#第一种开发要求" class="headerlink" title="第一种开发要求"></a>第一种开发要求</h3><ul><li>类名称必须存在有意义，例如：Book、Emp；</li><li>类之中所有的属性必须private封装，封装后的属性必须提供有setter、getter方法；</li><li>类之中可以提供有任意多个构造方法，但是必须保留有一个无参构造方法；</li><li>类之中不允许出现任何的输出语句，所有的信息输出必须交给被调用处输出；</li><li>类之中需要提供有一个取得对象完整信息的方法，暂定为：getInfo()，而且返回String型数据；</li></ul><h3 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h3><pre><code class="java">class Emp{ // 定义一个有意义的类    // 用private封装    private int empno;    private String ename;    private String job;    private double sal;    private double comm;    public Emp(){} // 无参构造方法    public Emp(int empno,String ename,String job,double sal,double comm){ // 有参构造方法        empno = empno;        ename = ename;        job = job;        sal = sal;        comm = comm;    }    // setter方法    public void setEmpno(int e){        empno = e;    }    public void setEname(String e){        ename = e;    }    public void setJob(String j){        job = j;    }    public void setSal(double s){        sal = s;    }    public void setComm(double c){        comm = c;    }    // getter方法    public int getEmpno(){        return empno;    }    public String getEname(){        return ename;    }    public String getJob(){        return job;    }    public double getSal(){        return sal;    }    public double getComm(){        return comm;    }    public String getInfo(){ // 取得对象完整信息的方法        return &quot;雇员编号：&quot; + empno + &quot;\n&quot; +                &quot;雇员姓名：&quot; + ename + &quot;\n&quot; +                &quot;雇员职位：&quot; + job + &quot;\n&quot; +                &quot;基本工资：&quot; + sal + &quot;\n&quot; +                &quot;佣    金：&quot; + comm;    }}public class Demo{    public static void main(String args[]){        Emp e = new Emp(7369,&quot;SMITH&quot;,&quot;CLERK&quot;,800.0,1.0);        e.setEname(&quot;ALLEN&quot;);        System.out.println(e.getInfo());        System.out.println(&quot;姓名：&quot; + e.getEname());    }}</code></pre><h1 id="数组的定义与作用"><a href="#数组的定义与作用" class="headerlink" title="数组的定义与作用"></a>数组的定义与作用</h1>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>还2020河南专升本考生一个公平</title>
     <link href="/2020-07-12/fair/"/>
     <url>/2020-07-12/fair/</url>
@@ -239,7 +260,7 @@
     <link href="/2020-02-11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/"/>
     <url>/2020-02-11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/</url>
     
-    <content type="html"><![CDATA[<p>最近在b站学习vue框架，跟着老师用vue写了一个音乐播放器</p><p>实例<a href="http://ganto.xyz/vue">链接</a></p><p>播放器使用了 网易云音乐api 接口</p><p>用vue实现的</p><p>如想了解 <a href="https://autumnfish.cn/" target="_blank" rel="external nofollow noopener noreferrer">网易云音乐 API</a> 可以访问官方文档了解</p>]]></content>
+    <content type="html"><![CDATA[<p>最近在b站学习vue框架，跟着老师用vue写了一个音乐播放器</p><p>实例<a href="http://ganto.xyz/vue" target="_blank" rel="external nofollow noopener noreferrer">链接</a></p><p>播放器使用了 网易云音乐api 接口</p><p>用vue实现的</p><p>如想了解 <a href="https://autumnfish.cn/" target="_blank" rel="external nofollow noopener noreferrer">网易云音乐 API</a> 可以访问官方文档了解</p>]]></content>
     
     
     
