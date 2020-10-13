@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://cevno.cn/2020-07-12/fair/</loc>
+    <lastmod>2020-10-13</lastmod>
+  </url>  <url>
     <loc>http://cevno.cn/2020-02-10/vue%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</loc>
     <lastmod>2020-09-25</lastmod>
   </url>  <url>
@@ -48,9 +51,6 @@
   </url>  <url>
     <loc>http://cevno.cn/2020-04-18/163music/</loc>
     <lastmod>2020-07-26</lastmod>
-  </url>  <url>
-    <loc>http://cevno.cn/2020-07-12/fair/</loc>
-    <lastmod>2020-07-25</lastmod>
   </url>  <url>
     <loc>http://cevno.cn/2020-04-16/dog/</loc>
     <lastmod>2020-04-17</lastmod>
