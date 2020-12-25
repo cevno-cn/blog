@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.cevno.cn/2020-02-26/sitemap/</loc>
+    
+    <lastmod>2020-12-25T00:52:26.916Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.cevno.cn/2020-07-12/fair/</loc>
     
     <lastmod>2020-10-13T00:45:31.557Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://blog.cevno.cn/2020-02-11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/</loc>
     
     <lastmod>2020-09-25T23:58:42.617Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.cevno.cn/2020-02-26/sitemap/</loc>
-    
-    <lastmod>2020-09-25T23:58:37.420Z</lastmod>
     
   </url>
   
@@ -75,13 +75,6 @@
     <loc>http://blog.cevno.cn/2020-01-15/advance/</loc>
     
     <lastmod>2020-09-25T23:57:50.727Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.cevno.cn/2020-02-18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%B2/</loc>
-    
-    <lastmod>2020-09-25T23:57:46.015Z</lastmod>
     
   </url>
   

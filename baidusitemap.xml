@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://blog.cevno.cn/2020-02-26/sitemap/</loc>
+    <lastmod>2020-12-25</lastmod>
+  </url>  <url>
     <loc>http://blog.cevno.cn/2020-07-12/fair/</loc>
     <lastmod>2020-10-13</lastmod>
   </url>  <url>
@@ -8,9 +11,6 @@
     <lastmod>2020-09-25</lastmod>
   </url>  <url>
     <loc>http://blog.cevno.cn/2020-02-11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/</loc>
-    <lastmod>2020-09-25</lastmod>
-  </url>  <url>
-    <loc>http://blog.cevno.cn/2020-02-26/sitemap/</loc>
     <lastmod>2020-09-25</lastmod>
   </url>  <url>
     <loc>http://blog.cevno.cn/2020-01-09/pdf-js/</loc>
@@ -32,9 +32,6 @@
     <lastmod>2020-09-25</lastmod>
   </url>  <url>
     <loc>http://blog.cevno.cn/2020-01-15/advance/</loc>
-    <lastmod>2020-09-25</lastmod>
-  </url>  <url>
-    <loc>http://blog.cevno.cn/2020-02-18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%B2/</loc>
     <lastmod>2020-09-25</lastmod>
   </url>  <url>
     <loc>http://blog.cevno.cn/2020-02-11/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-API/</loc>
