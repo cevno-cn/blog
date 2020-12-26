@@ -15,7 +15,7 @@
   <meta name="description" content="Ganto的个人笔记">
   <meta name="author" content="Ganto">
   <meta name="keywords" content>
-  <title>归档 _ Ganto</title>
+  <title>VSCode _ Ganto</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
@@ -39,7 +39,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 50vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">&nbsp;<strong>Ganto</strong>&nbsp;</a>
@@ -110,7 +110,7 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background" parallax="true">
+    <div class="view intro-2" id="background" false>
       <div class="full-bg-img">
         <div class="bgimg"></div>
         <div class="mask rgba-black-light flex-center">
@@ -119,6 +119,22 @@
               
             </span>
 
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期六, 2020-12-26, 上午 11:29
+                </p>
+              
+
+              <p>
+                
+
+                
+
+                
+              </p>
             
           </div>
 
@@ -130,95 +146,97 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 20 篇文章</p>
-  <hr>
-  
-    
       
-      <p class="h5">2020</p>
-    
-    <a href="/2020-02-18/hexo%E5%8D%9A%E5%AE%A2%E4%BB%8E0%E5%88%B0%E9%83%A8%E7%BD%B2/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">hexo博客从0到部署</span>
-      <span style="float: right;">02-18</span>
-    </a>
-  
-    
-    <a href="/2020-02-15/%E5%85%B3%E4%BA%8EJavaScript%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E6%95%B4%E7%90%86/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">关于JavaScript中常用方法的整理</span>
-      <span style="float: right;">02-15</span>
-    </a>
-  
-    
-    <a href="/2020-02-11/axios%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">axios使用方法</span>
-      <span style="float: right;">02-11</span>
-    </a>
-  
-    
-    <a href="/2020-02-11/vue%E7%BB%83%E4%B9%A0%E5%AE%9E%E4%BE%8B/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">vue练习实例</span>
-      <span style="float: right;">02-11</span>
-    </a>
-  
-    
-    <a href="/2020-02-11/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-API/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">网易云音乐 API</span>
-      <span style="float: right;">02-11</span>
-    </a>
-  
-    
-    <a href="/2020-02-10/vue%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">vue中的常用指令</span>
-      <span style="float: right;">02-10</span>
-    </a>
-  
-    
-    <a href="/2020-01-17/onsubmit/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">解决表单点击回车（enter）键自动刷新无法提交的问题</span>
-      <span style="float: right;">01-17</span>
-    </a>
-  
-    
-    <a href="/2020-01-15/advance/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">图片预加载</span>
-      <span style="float: right;">01-15</span>
-    </a>
-  
-    
-    <a href="/2020-01-09/pdf-js/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">初识pdf.js - 强大的pdf预览工具</span>
-      <span style="float: right;">01-09</span>
-    </a>
-  
-</div>
 
-  <nav aria-label="index posts navigation">
-    <span class="pagination pg-blue justify-content-center mt-5" id="pagination">
-      <a class="extend prev" rel="prev" href="/archives/2020/"><i class="fas fa-angle-double-left"></i></a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
-    </span>
-  </nav>
-  
-  <script>
-    for (ele of document.getElementById("pagination").getElementsByClassName("page-number")) {
-      ele.href += '#board';
-    }
-  </script>
-
-
-              </div>
-            </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <p>开启服务之前先设置VSCode <code>属性</code> 中的 <code>兼容性</code> 中的  <code>以管理员身份运行此程序</code></p>
+<p>运行get-ExecutionPolicy，显示Restricted（受限的）</p>
+<pre><code>get-ExecutionPolicy
+Restricted</code></pre><p>运行set-ExecutionPolicy RemoteSigned，设置RemoteSigned</p>
+<pre><code>set-ExecutionPolicy RemoteSigned
+get-ExecutionPolicy
+RemoteSigned</code></pre><p>安装</p>
+<pre><code>npm install -g live-server 或者 cnpm install live-server -gf </code></pre><p>开启服务</p>
+<pre><code>live-server</code></pre>
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/VSCode">VSCode</a>
+                
+              </span>
+            
+            </p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+  <div id="vcomments" style="width: 100%; margin: 0 auto;"></div>
+  <!-- <script src="https://unpkg.com/valine@1.4.9/dist/Valine.min.js"></script> -->
+  <script defer src="//cdn.jsdelivr.net/npm/valine"></script>
+  <!-- <script src="http://ganto.xyz/libs/Valine.min.js"></script> -->
+
+  <script>
+    var notify = 'false' === true;
+    var verify = 'false' === true;
+    var oldLoad = window.onload;
+    window.onload = function () {
+      new Valine({
+        el: '#vcomments',
+        notify: notify,
+        verify: verify,
+        app_id: "aepSK01JH6MBBnycMOyG8esk-MdYXbMMI",
+        app_key: "r6fIpym2WjgJ67oqJY4Xb4t0",
+        placeholder: "^_^说说你的看法吧！",
+        avatar: "monsterid",
+        meta: ['nick', 'mail', 'link'],
+        pageSize: "10",
+      });
+      oldLoad && oldLoad();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="external nofollow noopener noreferrer">comments
+      powered by Valine.</a></noscript>
+
+
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -287,6 +305,11 @@
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js"></script>
+  
+  <script src="/js/post.js"></script>
+
 
 
   <script src="/lib/smoothscroll/SmoothScroll.min.js"></script>
@@ -327,7 +350,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "归档&nbsp;",
+        "VSCode&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

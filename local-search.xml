@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>VSCode</title>
+    <link href="/2020-12-26/VSCodeWebServer/"/>
+    <url>/2020-12-26/VSCodeWebServer/</url>
+    
+    <content type="html"><![CDATA[<p>开启服务之前先设置VSCode <code>属性</code> 中的 <code>兼容性</code> 中的  <code>以管理员身份运行此程序</code></p><p>运行get-ExecutionPolicy，显示Restricted（受限的）</p><pre><code>get-ExecutionPolicyRestricted</code></pre><p>运行set-ExecutionPolicy RemoteSigned，设置RemoteSigned</p><pre><code>set-ExecutionPolicy RemoteSignedget-ExecutionPolicyRemoteSigned</code></pre><p>安装</p><pre><code>npm install -g live-server 或者 cnpm install live-server -gf </code></pre><p>开启服务</p><pre><code>live-server</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>VSCode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>还2020河南专升本考生一个公平</title>
     <link href="/2020-07-12/fair/"/>
     <url>/2020-07-12/fair/</url>
